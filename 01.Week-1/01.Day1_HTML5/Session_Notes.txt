@@ -1,1 +1,119 @@
   
+
+Day-1  (16-02-2026)
+~~~~~~~~~~~~~~~~~~~~~
+
+1.  What is HTML?   HTML vs XML?  
+2.  Diff.. head, h1, header tags in html?
+3.  What is significance of div tag in html?  
+4.  What are in-line and block elements in html?
+
+
+
+
+Markup:
+	<tag> Context  </tag>
+	
+
+Eg:   HTML, XML 			--				(XAML)  -- WPF
+
+
+<div></div>
+<p></p>
+<span></span>
+<img /> 
+<a></a>
+
+
+
+<ol></ol>
+<ul></ul>
+<li></li>
+	
+	
+<tables>	</tables>	
+
+---   tr, td, th, etc...
+
+
+
+<html>
+	<head>
+		
+	</head>
+	<body>
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+>			Tags   and  Attributes 
+
+
+<p></p>
+<img   src="Image1.jpg"  alt="Alternate text" />
+
+
+
+Web Developer -  Target:
+		a.  Functionality 
+		b.  SEO
+		c.  Accessibility 
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+3.  What is significance of div tag in html?  
+
+
+	Before HTML5:			div ----	  headers,  footers,  side bars, sections,  .........
+	After HTML5:			semantic Tags:
+							----	  header,  footer,  aside, section, article, nav,  .........
+		
+		
+	
+	
+	
+Software:
+	1.  Editor 	:		Notepad / Notepad++ /  VS Code 	
+			https://code.visualstudio.com/download
+	
+	2.  Browser 	:		Chrome / Safari  / Edge 
+	
+	
+	
+	
+	
+	<ul>
+		<li>.NET
+				<ul>
+						<li>C#.NET</li>
+						<li>ASP.NET
+								<ul>
+										<li>ASP.NET Web API</li>
+										<li>ASP.NET MVC Apps</li>
+								</ul>
+						</li>
+				</ul>
+		
+		</li>
+	</ul>
+	
+	
+	
+	
+	th
+	
+	thead, tbody, tfoot
+	
