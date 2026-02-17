@@ -1,0 +1,77 @@
+
+
+1.  Why do we use forms in html?
+2.  What is significance of "action"  attribute ?
+3.  Diff. between GET and POST methods?
+
+
+
+
+
+-------------------------------------------
+
+Navigations in HTML
+~~~~~~~~~~~~~~~~~~
+
+
+Types of Navigations
+~~~~~~~~~~~~~~~~~~
+1.  External Navigations		----		between the web sites 
+		
+		<a  href="https://facebook.com">Facebook</a>	
+		<a  href="https://youtube.com">youtube</a>	
+		...
+		
+		Hint :  Absolute Urls 
+		
+2.  Internal Navigations			----		between the web pages  of same web site 
+
+		<a  href="Login.html">Login</a>	
+		<a  href="/Admin/Register.html">Register</a>	
+		...
+		
+		Hint :  Relative  Urls 
+		
+3.  Inline Navigations  			----		between the sections  of same web page
+
+	
+	<a  href="#section1">News</a>	
+	<a  href="#section2">Clients</a>	
+	...
+
+	Hint :   id based url prefix with "#"
+	
+	
+	--------------------
+	
+	
+	
+Forms in HTML
+~~~~~~~~~~~~~~~
+
+1. Collect data from user
+2. Send to the server 
+
+Eg:  Login, Register, Payment, etcc... 
+
+>   Act as a bridge between client and server
+
+
+a.  action ---  data send to the server (Server Url )
+b.  method ---  how data send to the server 
+						 GET / POST
+						 
+						 
+Tags:
+
+1.  form
+2.  input 	:		type, id, name, value 
+	
+		type :    text, password, submit,  reset, button,  checkbox, radio, etc...
+
+3.  select & option 
+4.  textarea 
+
+
+
+
