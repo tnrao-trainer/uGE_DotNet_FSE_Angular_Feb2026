@@ -1,0 +1,108 @@
+<html>
+	<head></head>
+	<body>
+		<h3>WebForms 2.0 in HTML5</h3>
+		<hr/>
+		
+		<form   autocomplete="off"  action="Register.php"  id="form1"  method="post">
+				
+				<table align="center"  border="0">
+						<tr>
+							<td>First Name  :</td>
+							<td> <input  autofocus  value="Scott"  type="text"  name="t1"  required    /> </td>
+						</tr>
+						
+						<tr>
+							<td>Last Name :</td>
+							<td> <input    placeholder="Enter Last Name" type="text"  name="t2"   /> </td>
+						</tr>
+						
+						<tr>
+							<td>Age :</td>
+							<td> <input type="number"  name="t3" step="1" min="10"  max="50"   /> </td>
+						</tr>
+						
+						 <tr>
+							<td>Join Date :</td>
+							<td> <input type="date"  name="t4"  /> </td>
+						</tr>
+						
+						<tr>
+							<td>Phone Number:</td>
+							<td> <input type="text"   pattern="\d{10}"  name="t5"  /> </td>
+						</tr>
+						
+						<tr>
+							<td>E-mail:</td>
+							<td> <input type="email"  name="t6"  /> </td>
+						</tr>
+						
+						<tr>
+							<td>Gender:</td>
+							<td> 
+									 <input type="radio"  name="r1"  value="Male"  />  Male
+									 <input type="radio"  name="r1"  value="Female" />  Female						
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Hobbies :</td>
+							<td> 
+								 <input type="checkbox"  name="ck1"  value="Reading Books"  />  Reading Books   <br/>
+								 <input type="checkbox"  name="ck1"  value="Making Friends"  />  Making Friends <br/>
+								 <input type="checkbox"  name="ck1"  value="Playing Games"  />  Playing Games <br/>
+								 		
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Qualification:</td>
+							<td> 
+								<select name="s1">
+									<option>M.Tech</option>
+									<option>MCA</option>
+									<option>B.Tech</option>
+									<option>BCA</option>
+									<option>Others</option>
+								</select>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Address:</td>
+							<td> 
+									<textarea  name="t7"  rows="5"  cols="25"></textarea>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Select Resume:</td>
+							<td> 
+									<input type="file" multiple="true" name="t8"  />
+							</td>
+						</tr>
+						
+							<tr>
+							<td></td>
+							<td> 
+									<input type="submit"  value="Register"  />
+									<input type="reset"  value="Reset"  />									
+							</td>
+						</tr>
+						
+						
+				</table>
+			 
+		</form>
+		
+		<br/>
+		Are you agree terms and conditions?  
+		<input type="checkbox"  form="form1" value="Yes"  name="ck1"  id="ck1" />
+		
+		
+		<br/><br/><br/><br/><br/><br/><br/><br/>
+		<br/><br/><br/><br/><br/><br/><br/><br/>
+	
+	</body>
+
+</html>
