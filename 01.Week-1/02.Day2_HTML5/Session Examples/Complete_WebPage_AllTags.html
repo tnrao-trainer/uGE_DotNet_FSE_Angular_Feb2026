@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Example HTML page demonstrating structure, common tags, semantic HTML, and forms.">
+  <title>HTML Learning Example</title>
+
+  <style>
+    /* Simple internal CSS for clarity and better visual structure */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header, footer {
+      background-color: #004d99;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    img {
+      max-width: 70%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    form {
+      background-color: #eef5ff;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #004d99;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #003366;
+    }
+
+    footer p {
+      font-size: 14px;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER SECTION -->
+  <header>
+    <h1>My HTML Learning Page</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#topics">Topics</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- SECTION 1: ABOUT -->
+    <section id="about">
+      <h2>About HTML</h2>
+      <p><strong>HTML (HyperText Markup Language)</strong> is the foundation of every webpage. It defines the structure and layout of web content using a system of elements and tags.</p>
+      <p>With HTML, you can organize text, embed images and videos, create links, and build forms that allow user interaction.</p>
+    </section>
+
+    <!-- SECTION 2: COMMON TAGS -->
+    <section id="topics">
+      <h2>Common HTML Tags</h2>
+
+      <article>
+        <h3>Headings and Paragraphs</h3>
+        <h4>Example:</h4>
+        <p>HTML provides six levels of headings, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, and uses the <code>&lt;p&gt;</code> tag for paragraphs.</p>
+        <p>This text is an example of a paragraph that gives structure to your content.</p>
+      </article>
+
+      <article>
+        <h3>Lists, Links, and Images</h3>
+
+        <h4>List Example:</h4>
+        <ul>
+          <li>HTML - Structure</li>
+          <li>CSS - Styling</li>
+          <li>JavaScript - Interactivity</li>
+        </ul>
+
+        <h4>Link Example:</h4>
+        <p>Visit <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Documentation</a> for more details.</p>
+
+        <h4>Image Example:</h4>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5 Logo">
+      </article>
+    </section>
+
+    <!-- SECTION 3: SEMANTIC HTML -->
+    <section id="semantic">
+      <h2>Semantic HTML Example</h2>
+      <article>
+        <h3>Why Semantic HTML Matters</h3>
+        <p>Semantic tags clearly describe their purpose. They help browsers, screen readers, and search engines understand content better.</p>
+        <p>For example, use <code>&lt;header&gt;</code> for top sections, <code>&lt;article&gt;</code> for standalone content, and <code>&lt;footer&gt;</code> for page footers.</p>
+      </article>
+    </section>
+
+    <!-- SECTION 4: FORM EXAMPLE -->
+    <section id="contact">
+      <h2>Contact Form Example</h2>
+      <p>Use the form below to submit your feedback.</p>
+
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="topic">Topic:</label>
+        <select id="topic" name="topic">
+          <option value="">--Select a Topic--</option>
+          <option value="structure">HTML Structure</option>
+          <option value="semantic">Semantic HTML</option>
+          <option value="forms">Forms</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <p>&copy; 2025 HTML Learning Page</p>
+    <p>Created for Beginners to Intermediate Learners</p>
+  </footer>
+</body>
+</html>

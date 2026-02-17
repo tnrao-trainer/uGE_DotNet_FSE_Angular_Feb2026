@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+    <h1>Working with Forms in HTML</h1>
+    <hr/>
+
+    <form action="Register.php"  method="POST"  autocomplete="off">
+        <fieldset>
+            <legend>User Registration Form</legend>
+        <label>User Name : </label>
+        <input  type="text"  id="uid"  name="uid" autofocus  placeholder="Enter user name" />
+        <br/><br/>
+        <label>Password : </label>
+        <input  type="password"  id="pwd"  name="pwd"   placeholder="Enter password" />
+        <br/><br/>
+
+        <label>Retype Password : </label>
+        <input  type="password"  id="pwd2"  name="pwd2"   placeholder="Re-Enter password" />
+        <br/><br/>
+
+        <label>Gender : </label>
+
+        <input  type="radio"  id="r1"  name="r1"  value="Male" />
+        <label>Male</label>
+
+        <input  type="radio"  id="r2"  name="r1"  value="Female" />
+        <label>Female</label>
+        <br/><br/>
+
+
+        <label>Qualification :</label>
+        <select id="s1" name="s1">
+            <option>B.Tech</option>
+            <option selected>M.Tech</option>
+            <option>BCA</option>
+            <option>MCA</option>
+            <option>Others</option>
+        </select>
+        <br/><br/>
+
+
+        <label>Tell me about yourself:</label> 
+        <br/>
+        <textarea id="ta1" name="ta1" rows="5" cols="30"></textarea>
+           <br/><br/>
+
+        
+        <label>Are you agree terms and conditions? </label>
+        <input  type="checkbox"  id="ck1"  name="ck1"  value="Yes" />
+            <br/><br/>
+
+        <input type="submit" value="Register"  />  
+        <input type="reset" value="Clear"  />  
+         </fieldset>      
+    </form>
+
+</body>
+</html>
