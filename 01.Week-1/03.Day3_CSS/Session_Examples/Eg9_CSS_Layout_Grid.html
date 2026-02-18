@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple CSS Grid Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    /* GRID CONTAINER */
+    .grid-container {
+      display: grid; /* enables grid layout */
+      grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+      grid-template-rows: auto; /* row height adjusts to content */
+      gap: 15px; /* space between grid items */
+      padding: 15px;
+      background-color: white;
+      border-radius: 8px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* GRID ITEMS */
+    .grid-item {
+        background-color: #007bff;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 6px;
+        font-size: 1.2em;
+    }
+
+    /* Example of spanning */
+    .item1 {
+      grid-column: span 2; /* spans across 2 columns */
+    }
+
+    .item3 {
+      grid-row: span 2; /* spans across 2 rows */
+    }
+
+    /* RESPONSIVE BEHAVIOR */
+    @media (max-width: 700px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 450px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Grid Layout Example</h1>
+
+  <div class="grid-container">
+    <div class="grid-item item1">Item 1 (spans 2 columns)</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item item3">Item 3 (spans 2 rows)</div>
+    <div class="grid-item">Item 4</div>
+    <div class="grid-item">Item 5</div>
+    <div class="grid-item">Item 6</div>
+    <div class="grid-item">Item 7</div>
+  </div> 
+
+</body>
+</html>
