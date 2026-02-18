@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors Example 2</title>
+  <style>
+    /* Descendant selector */
+
+    nav
+    {
+      text-align: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: green;
+    }
+
+    /* Attribute selector */
+    input[type="text"] {
+      border: 2px solid blue;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+    <h1>Welcome to CSS Selectors</h1>
+    <hr/>
+  
+  <nav>
+    <a href="#">Home</a> | <a href="#">About</a>   | <a href="#">Contact</a> | <a href="#">Services</a>
+  </nav>
+  <hr/>
+
+
+  <form>
+    <label>Username:</label>
+
+    <input type="text" placeholder="Enter your name" />    <br/>
+    <input type="text" placeholder="Enter your name" />    <br/>
+    <input type="text" placeholder="Enter your name" />    <br/>
+    <input type="text" placeholder="Enter your name" />    <br/>
+    <input type="text" placeholder="Enter your name" />    <br/>
+
+  </form>
+</body>
+</html>
