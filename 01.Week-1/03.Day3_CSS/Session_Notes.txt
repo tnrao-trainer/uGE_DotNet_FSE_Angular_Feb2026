@@ -1,0 +1,68 @@
+
+
+
+
+1.  Why do we use CSS in Web development?
+2.  What is external CSS? Advantages?  
+3.  Diff. types of selectors in CSS?  
+
+
+
+
+
+1.  Where :    Internal ,  External ,  Inline 
+2.  What  :     Selectors   (Internal ,  External)
+
+		selector
+		{
+			prop : value;
+			prop : value;
+			prop : value;
+			.....
+		}
+
+3.   How  :      CSS Properties
+
+
+
+* {  color :  red;  }
+div {  color :  red;  }
+#div1 {  color :  red;  }
+#div1   p {  color :  red;  }
+
+div.intro {  color :  red;  }
+p.intro {  color :  red;  }
+.intro {  color :  red;  }
+
+<p class="warning"></p>
+<p  class="intro"></p>
+<p  class="intro"></p>
+
+<div  class="intro"></div>
+<div class="card"></div>
+<div class="warning"></div>
+
+
+
+border-top-width : 10px;
+
+text-align
+border-top-width
+margin-left
+
+
+
+
+text-decoration :   none  / underline  / overline / line-through ;
+
+
+
+
+
+
+
+
+
+
+
+
