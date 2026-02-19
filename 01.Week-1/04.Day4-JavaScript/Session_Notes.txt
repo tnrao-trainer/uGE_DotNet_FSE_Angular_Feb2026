@@ -1,0 +1,266 @@
+JavaScript Programming
+---------------------------------
+
+-->  To perform Validations 
+-->  Dynamic styling 
+-->  Show/Hide content
+-->  Math Calculations  
+-->  Partial Page updates 
+-->  AJAX 	(Communicate with API)
+ 
+-->   Also used for server side programming (Node/Express)
+-->   No-Sql database - MongoDb ---  javascript 
+
+
+
+
+
+
+
+
+
+
+ Variables  and Data Types
+~~~~~~~~~~~~~~~~~~~~~~
+--> to store data in the program so that we can do operations. 
+--> "var" keyword to declare all types of variables.
+--> Alternatively, we can also use "let"  keyword.
+-->  Supported data types :  number, string, boolean 
+
+In JavaScript: 	
+	var  uname  = "Scott";			//  string
+	var  age  = 25;			//  number
+	var  isValid  = true;		// boolean
+	var  x ;	// undefined
+	
+	let  uname  = "Scott";			//  string
+	let  age  = 25;			//  number
+	let  isValid  = true;		// boolean
+	let  x ;	// undefined
+--------------------------------------------------------------------------------------------------
+
+
+Output Statements
+~~~~~~~~~~~~~~~~~
+
+console.log();		----    display message in the browser console
+console.log("Hello World");
+
+alert();					----	  pop-up boxes 
+alert("Hello World");
+
+
+
+
+
+
+
+
+
+ Operators:
+ ~~~~~~~~~~
+	Math 	:					+    -    *     /    %
+	Comparison Operator  	:	   		==		!=      <  		<=    	>   		>=
+	Logical Operator  	:	   		&&     ||      !		
+	Increment-decrement:			++   --    
+	Assignment 	:			=   +=  -=   *=   /=   %= 
+		
+				x = 10;
+				x  += 10;   // x = x + 10;	 
+				x  -= 5;		  //  x  = x  - 5;
+				x++;			//		 x  = x + 1;	
+				x--;			//		 x  = x - 1;	
+------------------------------------------------------------------------------------------------------
+ 
+ Write a JavaScript code to check uid and pwd Validation
+ 
+ 
+ 
+ uid = ""
+pwd = ""
+
+admin
+admin123
+
+
+ a.  login Button,  label,   
+ b.  input --- user id, input -- password 
+  
+ c.   use dom elements   ---  access text values 
+ d.   logic execute on button click 			---   event handling 
+ e.   create a function , call the function button click 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+How to define Functions in JavaScript?
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ function   fn_name()
+ {
+	 	// return value; 
+ }
+ 
+ Eg:
+			function   greeting()
+			function   sum(x, y)
+			function   getTotal(price, qty)
+			
+Invoke/Call the function:
+
+			greeting();
+			var result  =  sum(10,20);
+			var total  =  getTotal(2500, 2);
+			
+---------------------------------------------------------------------------------------
+ 
+ 
+ 
+ Event Handling in JavaScript
+ ~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ 
+1.  Create a function to handle the event
+		
+		function   loginButtonClick(){
+							// code
+		}
+ 
+ 2.  Call the function using event attribute 
+ 
+		<input type="button"   onclick="loginButtonClick()"  .../>
+ 
+ 
+ ---------------------------------------------------------------
+ 
+ 
+Access DOM elements (HTML tags) in JavaScript
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+let  domObj  =  document.getElementById("id");
+ 
+ 
+ 
+ Apply styles in JavaScript
+ ~~~~~~~~~~~~~~~~~~~~~
+ 
+ domObj.style.property = value;
+ domObj.style.color = "Green";
+ domObj.style.backgroundColor = "Green";
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ Loops in JavaScript:
+		while,  do...while, for
+		
+Arrays :	Loops to process arrays:	
+				for,   for...in,  for...of 
+ 
+ -------------------------------------------------------------
+ 
+ Arrays in JavaScript
+~~~~~~~~~~~~~~~~~~~~~
+-> Array is a collection of similar data items. 
+-> JavaScript also supports arrays concept to handle collections of items.
+-> JavaScript libraries provides properties and methods to programming arrays.
+
+Creating Array
+---------------------
+-> We can create the array in following ways:
+
+1. Creating empty array
+	Eg:		var names  = [];
+				var marks   = [];				
+
+2. Creating array with elements
+	Eg:		var marks  = [78,98,88,68,58];
+	
+3. Array with size
+	Eg:		
+		var marks   = 	new Array(15);
+		var names  = 	new Array(20);
+				
+Note: We can get the size of the array by using length property.	
+
+Eg:		alert(marks.length);
+---------------------------------------------------------------
+
+Accessing array elements
+~~~~~~~~~~~~~~~~~~~~~
+-> We can access the elements of the array using index(positions of item).
+
+	Eg:		ar[0] ,  ar[1], ...
+
+-> Starting Index is  0.
+-> Ending  Index is   ar.length - 1.
+
+	First Item :  ar[0]
+	....
+	Last Item :   ar[ ar.length - 1]
+
+-> Array Iteration :  Use "for" loop to access all elements of array as follows:
+	
+Usage:
+	for(let i = 0; i < ar.length;  i++ )	
+	{
+		alert( ar[i] );
+	}
+
+Using for...in
+~~~~~~~~~~~
+	for(let  i  in   ar)	
+	{
+		alert(ar[i]);
+	}
+	
+Using for...of
+~~~~~~~~~~~
+	for(var  item  of   ar)	
+	{
+		alert( item );
+	}	
+---------------------------------------------------------------
+
