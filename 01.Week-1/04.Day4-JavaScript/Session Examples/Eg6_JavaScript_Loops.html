@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Programming - Loops</h1>
+    <hr/>
+
+    <input type="button" onclick="button1Click()" value="While" />
+    <input type="button" onclick="button2Click()" value="Do..While" />
+    <input type="button" onclick="button3Click()" value="For" />
+
+    <p id="p1" style="border:2px solid blue; padding: 10px;"></p>
+
+    <script>
+
+       let paraObj = document.getElementById("p1");
+       let str  = "";
+
+      function  button1Click(){ 
+            
+        let i = 1;
+      
+        str = "";
+        while (i <= 10)
+        {
+            // console.log(i);
+            str +=  i + "<br/>";
+            i++;
+        }
+
+        paraObj.innerHTML = str;
+      }
+
+
+        function  button2Click(){
+
+        
+            
+        let i = 10;
+        str  = "";
+
+        do
+        {
+            // console.log(i);
+            str +=  i + "<br/>";
+            i--;
+        }while (i >= 1);
+
+        paraObj.innerHTML = str;
+      }
+
+
+        function  button3Click(){            
+       
+        str  = "";
+       
+        for(let i = 1; i <= 10; i++)
+        {
+            str +=  (i * 2) + "<br/>";
+        }
+
+        paraObj.innerHTML = str;
+      }
+
+    </script>
+</body>
+</html>
