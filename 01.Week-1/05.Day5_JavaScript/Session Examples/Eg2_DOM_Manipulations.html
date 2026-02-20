@@ -1,0 +1,66 @@
+<html>
+	<head></head>
+	<body>
+		<h3>JavaScript Programming --  Dynamic DOM  </h3>
+		<hr/>
+		
+		
+		<input type="button"   value="Add Para To Body"   onclick="addParaToBody()"  />
+		<input type="button"   value="Add Para To Div"   onclick="addParaToDiv()"  />
+		<hr/>
+		<input type="button"   value="Remove Para From Body"   onclick="removeParaFromBody()"  />
+		<input type="button"   value="Remove Para From Div"   onclick="removeParaFromDiv()"  />
+		<br/><br/>
+		
+		
+		<div  id="div1"  style="border:1px solid gray; padding: 10px;">
+		
+		</div>
+	 
+		<hr/>
+	 
+		
+		<script>	
+		 
+			  function addParaToBody()
+			  {		 
+				 var paraObj = document.createElement("p");
+				 paraObj.setAttribute("id", "p1");
+				 paraObj.innerHTML =  "Adding new DOM elements at runtime";
+
+				 document.body.appendChild(paraObj);
+			  }		
+			  
+			    function addParaToDiv()
+			  {
+					var  paraObj  =  document.createElement("p");	
+					paraObj.setAttribute("id", "p2");				 
+					paraObj.setAttribute("align", "center");				 
+					paraObj.innerHTML = "Welcome to Dynamic DOM";
+						
+					var divObj =  document.getElementById("div1")
+					divObj.appendChild(  paraObj );
+			  }		
+			  
+			  function removeParaFromDiv()
+			  {
+					var  paraObj  =  document.getElementById("p2");					 
+						
+					var divObj =  document.getElementById("div1")
+					divObj.removeChild(  paraObj );
+			  }		
+			  
+			    function removeParaFromBody()
+			  {
+					var  paraObj  =  document.getElementById("p1");					 
+						
+					var divObj =  document.getElementById("div1")
+					 document.body.removeChild(paraObj);
+			  }		
+			 
+			 
+			 
+		</script>
+		 
+	</body>
+</html>

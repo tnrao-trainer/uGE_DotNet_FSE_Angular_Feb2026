@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ 
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions and Variable Scopes </h1>
+    <hr/>
+
+
+    <script>
+
+
+        function  demo()
+        {
+
+            const MAX = 100;
+            console.log(MAX);
+            MAX = 120;
+
+            console.log(x); // undefined             
+            var x = 10;
+            console.log(x); //  10
+            //-----------------------------------------------
+
+        //    console.log(y); // error :  Cannot access 'y' before initialization           
+            let y = 20;
+            console.log(y); // 20
+
+
+            if(true)
+            {
+                var z = 30;
+                let a = 40;
+                console.log(z,a);   
+            }
+
+            console.log(z);
+            console.log(a);
+        }
+
+
+        demo();
+
+
+    </script>
+
+</body>
+</html>

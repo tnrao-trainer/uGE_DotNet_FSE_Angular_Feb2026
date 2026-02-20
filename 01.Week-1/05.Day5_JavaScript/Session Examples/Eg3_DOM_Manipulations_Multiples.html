@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Select & Modify DOM — Example 1</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+  body { font-family: system-ui, sans-serif; padding: 20px; }
+  .card { border: 1px solid #ddd; padding: 12px; border-radius: 8px; max-width: 480px; }
+
+  .highlight { 
+      background:#f5f0cb; 
+      border-left:10px solid #18079ce2; 
+      padding:8px; 
+    }
+</style>
+</head>
+<body>
+  <h1 id="pageTitle">Avatar (2009)</h1>
+  <div class="card" id="infoCard">
+    <p id="desc">Avatar is a 2009 epic science fiction film written and directed by James Cameron.</p>
+    <img id="avatar" width="400"  src="https://flicksandbricks.wordpress.com/wp-content/uploads/2017/08/img_2102.jpg?w=1108&h=737&crop=1" alt="avatar" />
+    <br/>
+    <button id="updateBtn"  onclick="updateButtonClick()">Update content</button>
+    <button id="toggleButton"  onclick="toggleButtonClick()">Toggle HighLight</button>
+  </div>
+
+<script>
+  // Select elements by ID
+  const title = document.getElementById('pageTitle');
+  const desc = document.getElementById('desc');
+  const avatar = document.getElementById('avatar');
+  const card = document.getElementById('infoCard');
+ 
+
+  // Modify text, attributes and classes
+function updateButtonClick()
+{
+    title.innerText = 'Avatar: The Way of Water';
+    desc.innerHTML = "<strong>Avatar: The Way of Water is a 2022 American epic science fiction film directed by James Cameron, it is the sequel to Avatar (2009) and the second installment in the Avatar film series.</strong>.";
+    avatar.setAttribute('src', 'https://m.media-amazon.com/images/S/pv-target-images/f0535dd61f56bddd6ee7f3bfb765645e45d78f373418ae37ee5103cf6eebbff0.jpg');
+
+  }
+ 
+  
+ function toggleButtonClick(){
+     card.classList.toggle('highlight');
+ }
+   
+   
+</script>
+</body>
+</html>
