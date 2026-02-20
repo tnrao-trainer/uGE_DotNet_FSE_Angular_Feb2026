@@ -1,0 +1,167 @@
+
+Day-5  ( JavaScript )  --   20th Feb, 2026
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Prep. Questions:
+	1.  Diff. methods to access dom elements in JavaScript?
+	2.  querySelector()   vs querySelectorAll()
+	3.  How to add new elements at runtime?  
+	
+	
+-----------------------------------------------
+
+Access dom elements
+~~~~~~~~~~~~~~~~~~~
+1.  getElementById("id")		----		dom object 
+2.  getElementsByClassName("classname")	---  array of dom objects 
+3.  getElementsByTagName("tagname")		---	array of dom objects 	
+
+4.  querySelector("css_selector")		  ----		dom object 
+5.  querySelectorAll("css_selector")		---	 array of dom objects 
+
+		--->	  multiple items ---   p1, p2
+		-->     more control 
+		-->     parent  child 
+		-->     attribute based selection 
+		.....
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	let   domObjArray  =   	document.getElementsByTagName("p")	;
+	
+	for(let i =0;  i < domObjArray.length; i++)
+	{
+			domObjArray[i].style.backgroundColor = "Red";
+	}
+
+
+	let paraObjArray = document.getElementsByTagName("p");
+
+		for (let paraObj of paraObjArray) 
+		{
+			paraObj.style.backgroundColor = "red";
+		}
+		
+		
+		var paraObjArray = document.querySelectorAll("div p");
+
+			for (let i = 0; i < paraObjArray.length; i++)
+			{
+				paraObjArray[i].style.backgroundColor = "Deeppink";
+			}
+		
+	
+	
+	
+	
+	
+ 
+	
+	
+	
+	
+	
+	
+
+	domObject.style.property = value;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+DOM Manipulations
+~~~~~~~~~~~~~~~~
+
+Add/Remove  elements at runtime:  
+
+
+
+var paraObj = document.createElement("p");
+paraObj.setAttribute("id", "p1");
+paraObj.innerHTML =  "Adding new DOM elements at runtime";
+
+document.body.appendChild(paraObj);	//  append to the body 
+document.body.removeChild(paraObj);	//  append to the body 
+
+var  divObj = document.geteElementById("div1");
+divObj.appendChild(paraObj);   // append to the div tag 
+divObj.removeChild(paraObj);   // append to the div tag 
+
+
+----------------------------------------------------------------------
+
+var listItemObj = document.createElement("li");
+listItemObj.innerHTML =  "New Item";
+
+var  listObj = document.geteElementById("ul");
+listObj.appendChild(listItemObj);   // append to the ul tag 
+	 
+	 
+			 
+			
+	
+	
+	
+	
+	
+	
+	var, let and const
+	~~~~~~~~~~~~~~~~
+	
+	var ---  entire function scope, accessible before declaration. 
+	let  ---  block scope, not accessible before declaration (error)
+	const  ---  block scope, not accessible before declaration (error), not re-assignable 
+	
+	
+	
+---------------------------------------------
+
+Adding events at runtime
+~~~~~~~~~~~~~~~~~~~~~
+	
+	
+	
+	<input type="button" id="myButton" value="Update Content" />
+	
+	
+		// 1. Select the element
+	const buttonObj = document.getElementById("myButton");
+	
+
+
+	// 2. Define the function to run when the event occurs
+	function changeText() {
+	  const paraObj = document.getElementById("demo");
+	  paraObj.textContent = "The text has been changed!";
+	}
+
+	// 3. Attach the event listener to the button
+	button.addEventListener("click", changeText);
+
+
+
+	// 3. Attach the event listener to the button
+	button.addEventListener("click",  function() {
+	  const paraObj = document.getElementById("demo");
+	  paraObj.textContent = "The text has been changed!";
+	});
