@@ -1,0 +1,48 @@
+<!-- Create a web page to display current location by using geolocation api of HTML5 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="uft-8" />  
+	</head>		
+	<body>	
+	<h1> GeoLocation API Demo </h1>
+	<hr></hr> 	
+	<button onclick="f1()">Get Current Location</button>	 		
+	<p id="p1"></p>	
+	
+		<script>			
+		
+		function  f1()
+		{
+navigator.geolocation.getCurrentPosition(fn_display); 
+		}		
+		
+		function fn_display( args )
+		{
+			var x = args.coords.latitude;
+			var y = args.coords.longitude;
+		
+	var  str  = "Latitude	: " + x;
+			str +="<br>";
+		    str += "Longitude : " + y; 
+		
+  var obj = document.getElementById("p1");
+			obj.innerHTML = str;
+		}	 
+		</script>			
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+		
+			
+			
