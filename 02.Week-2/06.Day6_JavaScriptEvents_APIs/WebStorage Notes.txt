@@ -1,0 +1,62 @@
+WebStorage API in HTML5
+~~~~~~~~~~~~~~~~~~~~~~~
+->WebStorage API is used to store the data in client system.
+
+-> It helps to sharing the data between multiple pages. It works completely in client system.
+
+-> This data is not accessible in server code.
+
+-> It will save the data permanently on client system  hard disc.  
+----------------------------------------------------------------
+
+Implementation of WebStorage
+~~~~~~~~~~~~~~~~~~~~~~~~~
+-> WebStorage is implemented with following objects:
+	1. localStorage		---		permanently
+	2. sessionStorage	---	temporary 	
+
+Methods
+~~~~~~~
+1. setItem(key, value)
+2. getItem(key)
+3. removeItem(key)
+4. clear()
+----------------------------------------------------------------
+
+Sample Usage
+~~~~~~~~~~~~
+// Set an item
+sessionStorage.setItem("uid", "scott");
+localStorage.setItem("uid", "scott");
+
+// Get an item
+let str  = sessionStorage.getItem("uid");
+let str  = localStorage.getItem("uid");
+
+
+// Remove item
+sessionStorage.removeItem("uid");
+localStorage.removeItem("uid");
+
+
+// Clear -- delete all items
+sessionStorage.clear()
+localStorage.clear()
+
+-------------------------------------------------------------
+ 
+Handling object in web storage
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+const   userOBj =  { uname ;  "",  token :  "", role  :  "admin", ........}
+
+localStorage.setItem("userData",  userObj);   // wrong 
+
+// js object to  string 
+localStorage.setItem("userData",  JSON.stringify(userObj)  );   // Correct 
+--------------------------  
+// string to js object 
+const   userObj =    JSON.parse(   localStorage.getItem("userData)  );
+
+
