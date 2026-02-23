@@ -1,0 +1,24 @@
+
+What is IndexedDB?
+
+IndexedDB is a client-side database built into modern web browsers that allows websites to store large amounts of structured data locally on the user’s device.
+
+Note:   It works like a NoSQL database inside the browser.
+
+
+Simple Definition:
+
+IndexedDB is a browser-based database used to store structured data persistently using key-value pairs and objects.
+
+
+Why IndexedDB is Used?
+
+Web applications sometimes need to store data without internet connection.
+
+Examples:
+		Offline web apps
+		To-do list apps
+		Notes applications
+		Progressive Web Apps (PWA)
+		Caching API responses
+		Games saving progress
