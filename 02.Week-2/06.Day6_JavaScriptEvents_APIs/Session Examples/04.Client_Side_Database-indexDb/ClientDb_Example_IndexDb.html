@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IndexedDB CRUD Example</title>
+</head>
+
+<body>
+
+<h2>IndexedDB CRUD Operations</h2>
+
+Name: <input type="text" id="name">
+Age: <input type="number" id="age">
+
+<br><br>
+
+<button onclick="openDB()">Open DB</button>
+<button onclick="addStudent()">Create</button>
+<button onclick="viewStudents()">Read</button>
+<button onclick="updateStudent()">Update</button>
+<button onclick="deleteStudent()">Delete</button>
+
+<h3>Output</h3>
+<ul id="output"></ul>
+
+<script>
+
+let db;
+
+// =====================
+// OPEN DATABASE
+// =====================
+function openDB() {
+
+    let request = indexedDB.open("StudentDB", 1);
+
+    request.onupgradeneeded = function(e) {
+        db = e.target.result;
+
+        let store = db.createObjectStore("students", {
+            keyPath: "id",
+            autoIncrement: true
+        });
+
+        store.createIndex("name", "name", {unique:false});
+    };
+
+    request.onsuccess = function(e) {
+        db = e.target.result;
+        alert("Database Ready");
+    };
+
+    request.onerror = function() {
+        console.log("Error opening DB");
+    };
+}
+
+// =====================
+// CREATE (INSERT)
+// =====================
+function addStudent() {
+
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+
+    let tx = db.transaction("students", "readwrite");
+    let store = tx.objectStore("students");
+
+    store.add({name:name, age:age});  //  perform create operation 
+
+    tx.oncomplete = function()
+	{
+			alert("Student Added");
+			viewStudents();
+	};
+}
+
+// =====================
+// READ (SELECT)
+// =====================
+function viewStudents() {
+
+    let list = document.getElementById("output");
+    list.innerHTML = "";
+
+    let tx = db.transaction("students", "readonly");
+    let store = tx.objectStore("students");
+
+    store.openCursor().onsuccess = function(e) {
+
+        let cursor = e.target.result;
+
+        if(cursor) {
+
+            let li = document.createElement("li");
+            li.textContent =
+                "ID: " + cursor.value.id +
+                " | Name: " + cursor.value.name +
+                " | Age: " + cursor.value.age;
+
+            list.appendChild(li);
+
+            cursor.continue();
+        }
+    };
+}
+
+// =====================
+// UPDATE
+// =====================
+function updateStudent() {
+
+    let id = prompt("Enter Student ID to update:");
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+
+    let tx = db.transaction("students", "readwrite");
+    let store = tx.objectStore("students");
+
+    let request = store.get(Number(id));
+
+    request.onsuccess = function() {
+
+        let data = request.result;
+
+        if(data){
+            data.name = name;
+            data.age = age;
+
+            store.put(data);		// update the data
+            alert("Student Updated");
+			viewStudents();
+        }
+        else{
+            alert("Record not found");
+        }
+    };
+}
+
+// =====================
+// DELETE
+// =====================
+function deleteStudent() {
+
+    let id = prompt("Enter Student ID to delete:");
+
+    let tx = db.transaction("students", "readwrite");
+    let store = tx.objectStore("students");
+
+    store.delete(Number(id));
+
+    tx.oncomplete = () => {
+	
+	alert("Student Deleted");
+	viewStudents();
+	} 
+}
+
+</script>
+
+</body>
+</html>
