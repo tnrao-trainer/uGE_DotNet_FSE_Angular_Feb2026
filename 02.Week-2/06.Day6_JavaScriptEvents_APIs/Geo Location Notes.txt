@@ -1,0 +1,33 @@
+
+GeoLocation API
+~~~~~~~~~~~~~~~
+-> HTML5 introduced another important API called "GeoLocation".
+
+-> It is used to identify geographical location.
+
+-> It will find the position based on latitude and longitude values.
+
+-> Most of the mobile apps are using this to identify the locations.
+
+-> Before HTML5, every one depends on third party API.
+
+-> After HTML5, we can easily implement this concept by using "GeoLocation" API.
+
+Implementation
+~~~~~~~~~~~~~~
+Step1: Invoke the following method by using "navigator" object.
+
+	-> geolocation is a property of navigator object.
+	
+Usage: 
+ navigator.geolocation.getCurrentPosition(fn_name);
+
+Step2: Implement the function to display the values return by getCurrentPosition().
+
+function fn_name(args)
+{
+	// args.coords.latitude;
+	// args.coords.longitude;
+} 
+ 
+----------------------------------------------------------
