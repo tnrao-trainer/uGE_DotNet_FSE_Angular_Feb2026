@@ -1,0 +1,43 @@
+<!-- Create web pages to demonstrate usage of web storage objects.
+
+File Name :  Demo1.html
+ -->
+<html>
+<head> </head>
+<body>
+	<h3>  HTML5 Api - Web Storage Demo  (Storing Objects) </h3>
+	<hr></hr>	
+	 
+ 
+	<input type="button" onclick="f1()"   value="Set Item" />
+	<input type="button" onclick="f2()"   value="Get Item" />
+	 
+	 <hr/>
+ 
+	
+	<script>	
+		function f1()
+		{
+				let  userObj =    {name :  "Scott",  role :  "Manager"};
+				localStorage.setItem("userData",    JSON.stringify(userObj)  );
+				alert("User data stored in localStorage");
+		}	
+		
+		function f2()
+		{	
+			 let result  =  localStorage.getItem("userData");
+			 let obj =  JSON.parse(result);
+			 console.log(obj);
+			 console.log(obj.name);
+			 console.log(obj.role);
+		}
+		
+	 
+	</script>	 
+</body>
+</html>
+
+
+
+
+

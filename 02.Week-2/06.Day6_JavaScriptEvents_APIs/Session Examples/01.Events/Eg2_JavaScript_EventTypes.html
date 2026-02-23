@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All JavaScript Events Combined</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        #colorBox {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 10px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Combined JavaScript Events Demo</h2>
+
+    <!-- FORM (submit + preventDefault + target) -->
+    <form id="userForm">
+        <label for="username">User Name  : </label>
+        <input type="text" id="username" name="username" placeholder="Enter Name" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="formMessage"></p>
+
+    <hr/>
+
+
+       <!-- CHANGE EVENT -->
+    <label>Select Theme Color:</label>
+    <select id="themeSelect">
+        <option value="">--Select--</option>
+        <option value="lightblue">Light Blue</option>
+        <option value="lightgreen">Light Green</option>
+        <option value="lightpink">Light Pink</option>
+    </select>
+
+    <hr>
+
+
+    <!-- INPUT EVENT -->
+    <label>Type Something:</label>
+    <input type="text" id="liveInput">
+    <p>Character Count: <span id="charCount">0</span></p>
+
+    <hr>
+
+
+     <!-- CLICK + EVENT TARGET (Event Delegation) -->
+    <h3>Click a Color Button:</h3>
+    <div id="buttonContainer">
+        <button>Red</button>
+        <button>Green</button>
+        <button>Blue</button>
+    </div>
+
+     <div id="colorBox">Hover or Click Me</div>
+   
+    <script>
+
+ 
+        // 1. SUBMIT EVENT + preventDefault + target
+        const form = document.getElementById("userForm");
+
+        form.addEventListener("submit", function(event) {
+          
+            event.preventDefault();     // Stopping the page submission
+
+            const username = event.target.username.value;
+
+            document.getElementById("formMessage").innerText =
+                "Welcome, " + username + "! Form submitted successfully.";
+
+        });
+
+
+           //2.CHANGE EVENT
+        const themeSelect = document.getElementById("themeSelect");
+
+        themeSelect.addEventListener("change", function(event) {
+            document.body.style.backgroundColor = event.target.value;
+        });
+
+
+
+         // 3. INPUT EVENT
+        const liveInput = document.getElementById("liveInput");
+
+        liveInput.addEventListener("input", function(event) {
+            document.getElementById("charCount").innerText =
+                event.target.value.length;
+        });
+
+
+          // 4. CLICK EVENT + EVENT TARGET (Event Delegation)
+        const buttonContainer = document.getElementById("buttonContainer");
+
+        buttonContainer.addEventListener("click", function(event) {
+            if (event.target.tagName === "BUTTON") { 
+                
+                document.getElementById("colorBox").style.backgroundColor =
+                    event.target.innerText.toLowerCase();
+            }
+        });
+
+ 
+       
+
+    </script>
+
+</body>
+</html>

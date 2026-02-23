@@ -1,0 +1,45 @@
+<!-- Create web pages to demonstrate usage of web storage objects.
+
+File Name :  Demo1.html
+ -->
+<html>
+<head> </head>
+<body>
+	<h3>  HTML5 Api - Web Storage Demo </h3>
+	<hr></hr>	
+	User Name  :  <input id="t1"  />
+	<br></br>
+	<input type="button" onclick="f1()"   value="Set Item" />
+	<input type="button" onclick="f2()"   value="Get Item" />
+	<input type="button" onclick="f3()"   value="Remove Item" />
+	<br></br>
+	<hr/>
+	<a href="Demo2.html">Next Page</a>
+	
+	<script>	
+		function f1()
+		{
+			var obj = document.getElementById("t1");
+			localStorage.setItem("uid",  obj.value);
+			alert("User Id stored in webstorage.");
+		}	
+		
+		function f2()
+		{	
+			var str  =  localStorage.getItem("uid");
+			alert("User Id  : " + str);
+		}
+		
+		function f3()
+		{	
+			localStorage.removeItem("uid");
+			alert("User Id removed from webstorage.");
+		}		
+	</script>	 
+</body>
+</html>
+
+
+
+
+
