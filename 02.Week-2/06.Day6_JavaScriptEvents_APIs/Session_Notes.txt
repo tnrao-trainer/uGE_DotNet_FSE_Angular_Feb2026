@@ -1,0 +1,93 @@
+
+
+
+1. What is event.target?  event.preventDefault()? 
+2.  What is event bubbling?
+3.   JSON.stringify()   and JSON.parse()? 
+
+
+
+
+
+
+<ul  id="menu">
+</ul>
+
+
+
+Syntax:  	 
+			document.getElementById("id").addEventListner("event_name",  callback);
+
+<script>
+		
+
+		 
+		 
+	 
+		 
+		 
+		 document.getElementById("menu").addEventListner("click", function()
+		 {
+						// code to handle the event 
+		 });
+		 
+		 
+		 
+		 
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+Events
+~~~~~~
+
+	An action that will perform by user on html elements (UI). 
+	
+	Eg:   click, submit, change, input, mouseover, mouseout,... etc....
+	
+	
+	a.   By using event attributes  
+			<input  type="button"  onclick="buttonClick()"   ....  />
+	
+	b.   By using addEventListener()  method 
+
+
+<input  type="button"  id="b1"  ....  />
+		
+		 document.getElementById("b1").addEventListener("click", function()
+		 {
+						// code to handle the event 
+		 });
+
+-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+document.body.style.backgroundColor  = "Red";
+
+
+
+
+
+
+
+
+
