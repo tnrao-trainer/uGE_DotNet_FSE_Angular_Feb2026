@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    <h1>Array of Objects</h1>
+    <hr/>
+
+    <button  onclick="button1Click()">Button-1</button>
+    <hr/>
+
+    <ul id="list1">        
+    </ul>
+ 
+
+    <hr/>
+
+    <footer>
+        <mark>Note: Working with Array of objects.</mark>    
+    </footer>
+
+    <script> 
+
+        function button1Click(){ 
+
+
+            let studentsArray = [
+                {id : 10256, name : "Scott", course : "React"},
+                {id : 10257, name : "Smith", course : "Angular"},
+                {id : 10258, name : "Sam", course : "Vue"},
+                {id : 10259, name : "Sandy", course : "Node"},
+                {id : 10260, name : "Stephen", course : "Express"},
+            ];
+
+
+            let lstObj = document.getElementById("list1");
+            
+            
+
+            for(let item of studentsArray)
+            {
+               const li = document.createElement("li");
+            //   li.innerHTML = "Mr./Mrs. " + item.name + " joined in " + item.course + " course";
+               li.innerHTML = `Mr./Mrs. <strong> ${item.name} </strong> joined in <em> ${item.course} </em> course`;
+               lstObj.appendChild(li);
+            }
+
+            
+
+ 
+        }
+    </script>
+</body>
+</html>

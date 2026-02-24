@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    <h1>JavaScript Arrays </h1>
+    <hr/>
+
+    <button  onclick="button1Click()">Button-1</button>
+ 
+
+    <hr/>
+
+    <footer>
+        <mark>Note: Check the console window to see the result.</mark>    
+    </footer>
+
+    <script>
+
+
+        function roundingNumber(n)
+        {
+            return n.toFixed(2);
+        }
+
+        function getEvens(n)
+        {
+            return n * 2;
+        }
+
+
+        
+
+        function button1Click(){
+
+            let ar1 = [1,2,3,4,5];
+
+            //1. Named Functions 
+            let ar2 = ar1.map( Math.sqrt );
+            let ar3 = ar2.map(roundingNumber);            
+            let ar4 = ar1.map(getEvens);
+
+            // 2. Anonymous function
+            let ar5 = ar1.map( function(n)
+            {
+                return n * 5;
+            });
+
+            //3. Arrow function
+            let ar6 = ar1.map( (n)  =>
+            {
+                return n * 10;
+            });
+
+            let ar7 = ar1.map( n => n * 11);
+            let ar8 = ar1.map( n => n * n);
+
+
+
+
+            console.log(ar1)
+            console.log(ar2)
+            console.log(ar3)
+            console.log(ar4)
+            console.log(ar5)
+            console.log(ar6)
+            console.log(ar7)
+            console.log(ar8)
+            
+         
+        }
+    </script>
+</body>
+</html>

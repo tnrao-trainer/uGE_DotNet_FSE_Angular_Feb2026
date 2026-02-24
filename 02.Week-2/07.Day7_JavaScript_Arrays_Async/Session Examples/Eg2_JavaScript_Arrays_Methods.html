@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    <h1> JavaScript  Array Methods </h1>
+    <hr/>
+
+    <button  onclick="button1Click()">Button-1</button>
+ 
+
+    <hr/>
+
+    <footer>
+        <mark>Note: Check the console window to see the result.</mark>    
+    </footer>
+
+
+    <script>
+        function button1Click(){
+                let ar1 = [10,20,30];                
+                console.log(ar1);                
+                
+                ar1.push(40);
+                ar1.push(50);
+                console.log(ar1);
+
+                ar1.pop();
+                console.log(ar1);   
+
+                let n = 20;
+
+                let index = ar1.indexOf(n);
+                ar1.splice(index,1);
+                console.log("After splice: ", ar1);
+
+        }
+    </script>
+</body>
+</html>

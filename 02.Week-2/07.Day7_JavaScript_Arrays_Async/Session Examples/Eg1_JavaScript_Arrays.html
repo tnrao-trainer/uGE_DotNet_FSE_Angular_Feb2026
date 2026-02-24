@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    <h1> JavaScript  Array </h1>
+    <hr/>
+
+    <button  onclick="button1Click()">Button-1</button>
+ 
+
+    <hr/>
+
+    <footer>
+        <mark>Note: Check the console window to see the result.</mark>    
+    </footer>
+
+
+    <script>
+        function button1Click(){
+                let ar1 = [10,20,30,40,50];
+                
+                console.log(ar1);
+
+                console.log("****  Using  For ****");
+
+                // access items of array  (using for)
+                for(let i = 0; i < ar1.length; i++)
+                {
+                    console.log(ar1[i]);
+                }
+
+
+                console.log("****  Using  For..in ****");
+                // access items of array (using for...in)
+                for(let i in ar1)
+                {
+                    console.log(ar1[i]);
+                }
+
+                console.log("****  Using  For..of ****");
+                // access items of array (using for...of)
+                for(let item of ar1)
+                {
+                    console.log(item);
+                }
+                
+        }
+    </script>
+</body>
+</html>
