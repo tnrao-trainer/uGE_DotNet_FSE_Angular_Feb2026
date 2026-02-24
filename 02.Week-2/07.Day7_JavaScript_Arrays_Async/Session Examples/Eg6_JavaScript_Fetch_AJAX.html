@@ -1,0 +1,54 @@
+<html>
+<head></head>
+<body>
+<h3>Asynchronous Programming in  JavaScript</h3>
+	<hr/> 
+	
+	<button  id="b1">Get Data </button>
+	<br/><br/>
+	<ul  id="list1"  style="border:2px solid blue; padding:30px;">
+	</ul>
+	 
+	 
+	<script>	 
+	
+		document.getElementById("b1").addEventListener("click", fn_getData);
+	
+		var lstObj = document.getElementById("list1");
+		
+		
+	function fn_getData()
+	{ 
+				let  url = "https://jsonplaceholder.typicode.com/users";
+				
+				fetch(url)
+						.then( res => res.json() )
+						.then( data => 
+						{						
+							// console.log(data);
+							displayData(data);							
+						}); 
+				
+	}  
+	
+	
+	function  displayData( dataArray )
+	{
+					lstObj.innerHTML = "";
+					
+					for(let item of   dataArray)
+					{
+							let   listItemObj =  document.createElement("li");
+							listItemObj.innerText =  ` ${item.name},  ${item.email}, ${item.address.city}`;   
+							lstObj.appendChild(listItemObj);		
+					} 
+	}
+	
+	</script>	 
+</body>
+</html>
+
+
+
+
+

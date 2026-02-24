@@ -1,0 +1,58 @@
+<html>
+<head></head>
+<body>
+<h3>Asynchronous Programming in  JavaScript</h3>
+	<hr/> 
+	
+	<button  onclick="fn_getData()">Get Data </button>
+	<br/><br/>
+	<ul  id="list1"  style="border:2px solid blue; padding:30px;">
+	</ul>
+	 
+	 
+	<script>	 
+	
+		var lstObj = document.getElementById("list1");
+		
+ 
+ 
+	async  function fn_getData()
+	{ 
+		try
+		{
+				let url = "https://jsonplaceholder.typicode.com/users123";
+				let response =  await  fetch(url);
+				let resData =    await  response.json();
+				displayData( resData );
+		}
+		catch(error)
+		{
+					lstObj.innerHTML = ""; 				   
+			//		lstObj.innerHTML  +=  "<li>" + error + "</li>";
+					lstObj.innerHTML  +=  "<li style='color:red;'>There is an issue to fetch data from server. Please try after sometime.</li>";
+					 
+		}
+	}  
+ 
+	
+	
+	function  displayData( dataArray )
+	{
+					lstObj.innerHTML = "";
+					
+					for(let item of   dataArray)
+					{
+							let   listItemObj =  document.createElement("li");
+							listItemObj.innerText =  ` ${item.name},  ${item.email}, ${item.address.city}`;   
+							lstObj.appendChild(listItemObj);		
+					} 
+	}
+	
+	</script>	 
+</body>
+</html>
+
+
+
+
+
