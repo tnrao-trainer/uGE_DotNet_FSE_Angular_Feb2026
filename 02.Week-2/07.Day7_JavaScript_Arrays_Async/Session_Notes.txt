@@ -1,0 +1,92 @@
+Day-7
+~~~~~
+
+
+Arrays in JavaScript
+~~~~~~~~~~~~~~~~~
+	let  ar1 =  [];	// empty array 
+	let  ar2 =  [10,20,30,40];		// array with elements 
+	let  ar3  =  new Array(5);		// array with size no elements  
+	
+	
+	ar1.length	:		property which returns no. of items in the array 
+	
+	
+Traverse array
+~~~~~~~~~~~~~
+
+
+	  // access items of array  
+	for(let i = 0; i < ar1.length; i++)
+	{
+		console.log(ar1[i]);
+	}
+	
+	for(let  i in  ar1)
+	{
+		console.log(ar1[i]);
+	}
+	
+	
+	for(let  item  of   ar1)
+	{
+		console.log( item );
+	}
+	
+	
+	
+	
+	
+1. push(item)
+2. pop()
+3. splice(start_index,  count )	
+
+		ar.splice(2,  1);		//  delete only one item i.e 2nd index 
+		ar.splice(2);	//  deletes all items from 2nd index 
+		ar.splice(0);	//  deletes all items  
+4. indexOf()
+		
+			ar.indexOf(item)	---	returns the index
+			
+5.  map()
+
+			
+		syntax:   	ar1.map(callback);
+							ar1.map(Math.sqrt);
+			
+ 
+
+String to Number 
+~~~~~~~~~~~~~~~	
+		
+Number()
+parseInt()
+parseFloat()
+
+
+
+Arrow functions
+~~~~~~~~~~~~~
+Arrow functions were introduced in ES6 (ECMAScript 2015) as a more concise way to write function expressions, using the => syntax. They are a popular feature in modern JavaScript, 
+
+
+
+let s1  =    {id : 10256, name : "Scott", course : "React"};
+let s2  =      {id : 10257, name : "Smith", course : "Angular"};
+
+   let studentsArray = [
+                {id : 10256, name : "Scott", course : "React"},
+                {id : 10257, name : "Smith", course : "Angular"},
+                {id : 10258, name : "Sam", course : "Vue"},
+                {id : 10259, name : "Sandy", course : "Node"},
+                {id : 10260, name : "Stephen", course : "Express"},
+            ];
+
+
+
+find()
+findIndex()
+filter()
+
+
+
