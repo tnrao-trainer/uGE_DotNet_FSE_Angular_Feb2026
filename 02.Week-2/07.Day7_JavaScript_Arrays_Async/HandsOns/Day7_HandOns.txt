@@ -1,0 +1,17 @@
+
+1.   Complete the hands-ons the given document.  (DAY-2 Hands-On_Part1_Arrays.docx)
+2.   Create a web page to implement following requirements:
+			a.  create collection of employees using array of objects 
+			b.  provide drop-down list in the page to select the job
+					options:
+							All Employees
+							Manager
+							Salesman
+							....		
+			c.   "Show Emps"  button --  display employees data in table format based on the selected job. 
+			
+3.   Check the following questions :
+			a.  What is asynchronous programming?
+			b.  Why do we use promises in javascrpt?
+			c.   What is the significance of async and await keywords?
+			d.   Why do we use fecth()  in javascrpt?
