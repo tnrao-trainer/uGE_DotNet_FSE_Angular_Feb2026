@@ -88,5 +88,47 @@ find()
 findIndex()
 filter()
 
+-----------------------------------------------------------------------
+
+Asynchronous programming
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+			a.  What is asynchronous programming?
+			
+				-->  Synchronous systems execute tasks sequentially, blocking progress until each operation completes, ensuring a strict, predictable order.   
+				
+				-->  Conversely, asynchronous systems allow tasks to run concurrently without waiting, improving efficiency and responsiveness by not blocking threads during I/O operations
+			
+				Eg:    AJAX -- asynchronous JavaScript and Xml 
+						 to communicate with server (api's)			
+			
+			b.  Why do we use promises in javascrpt?
+			
+					-->   in old versions, depends on the callbacks 
+					-->   in es6 (2025), promises concept was introduced 
+					-->   used to implement asynchronous programming easily 
+					
+						Promises are used in JavaScript to manage asynchronous operations (like fetching data from a server or running a timer) in a more structured, readable, and efficient way than traditional callbacks, thereby avoiding "callback hell". A promise acts as a placeholder for a value that will be available in the future.		
+					
+			
+			c.   What is the significance of async and await keywords?
+					
+					--> Simplify promise usage 
+					-->  The async and await keywords in JavaScript are used to write asynchronous code in a clean, synchronous-like manner, making it much easier to read, write, and maintain. They are essentially syntactical sugar built on top of standard JavaScript Promises. 
+			
+			d.   Why do we use fecth()  in javascrpt?
+			
+				 -->   fecth()   --- used to implement ajax for api calls (server communication)
+				 -->   fecth build on top of promise concept
+				
+				
+					fecth(url).then( callback );
+					fecth(url).then( (response) =>  
+					{
+								
+					});
+								
+				
+
 
 
