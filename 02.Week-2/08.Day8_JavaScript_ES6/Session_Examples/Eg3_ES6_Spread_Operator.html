@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    <h1>Advanced JavaScript - ES6( Usage of Spread Operator) </h1>
+    <hr/>
+ 
+  
+    <footer>
+        <mark>Note: Check the console window to see the result.</mark>    
+    </footer>
+
+
+    <script> 
+
+        // Spread operator with Array 
+            let ar1 = [10,20,30,40]; 
+            
+            let ar2 = [...ar1];  // copying an array
+            ar2.push(50);
+            console.log(ar1);
+            console.log(ar2);
+
+
+            let ar3 = [...ar2, 60,70];  // copy with new elements
+            console.log(ar3);
+
+            let ar4 = [...ar2, ...ar3];  // merging two arrays into one
+            console.log(ar4);
+
+
+            //  Spread operator with Object
+
+             let obj1 = { uname : "Scott", age : 30, email : "scott@gmail.com" };
+             let obj2 = {...obj1};
+             obj2.email = "scott123@gmail.com";
+             console.log(obj1)
+             console.log(obj2)
+
+             let obj3 = {...obj1, city :  "Hyderabad"}; // Added new property 
+             console.log(obj3);
+
+             let obj4 = {...obj3, city :  "Pune"};  // override the city property value 
+             console.log(obj4);
+
+             let obj5 = {...obj1, ...obj4};
+             console.log(obj5);
+
+       
+             // Spread operator with functions 
+            function   sum( ...ar   )
+			{					
+					var s = 0;					
+					 
+					for(let item of ar) {  					 
+						s  +=  item;
+					}					
+		 
+				 	console.log("Sum Result  : " +  s);
+				
+            }
+			
+
+
+        sum(10,20);
+        sum(10,20, 30);
+        sum(10);
+        sum(10,20,30,40,50,60,70, 80, 90, 100);	
+        sum(10,20,30,40);
+        sum();
+
+            
+        
+    </script>
+</body>
+</html>

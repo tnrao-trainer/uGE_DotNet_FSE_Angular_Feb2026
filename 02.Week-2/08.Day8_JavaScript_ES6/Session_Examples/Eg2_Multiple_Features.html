@@ -1,0 +1,115 @@
+<html>
+	<head>
+			<style>
+				div
+				{
+					  border: 1px solid #F8761F ;
+					  padding : 10px;
+					  width :  400px;
+					  border-radius :  5px;
+					  border-left-width :   10px;
+					  background-color :     #FEFAF7;
+					  margin: 10px;
+				}
+			</style>
+	
+	</head>
+	<body>
+		<h3>Advanced JavaScript  -- ES6</h3>
+		<hr/> 
+ 	   	   
+		<input type="button"  value="Get  Data"  onclick="buttonClick()"   />
+		 
+		 <br/><br/>
+		 
+		 <div  id="div1">	 </div>
+		 
+		 <div  id="div2">  </div>
+		 
+		 <div  id="div3">  </div>
+		 
+	 
+  
+		<script> 	
+		
+		
+			let  divObj1 = document.getElementById("div1");
+			let  divObj2 = document.getElementById("div2");
+			let  divObj3 = document.getElementById("div3");
+		
+		
+			// Default parameters	   
+			function   getTotalAmount(price,  qty = 1)
+			{ 		
+					let total =  price * qty;	 
+					
+					// String literals
+					let str  = `Unit Price :  ${price}, Quantity : ${qty}, Total Amount  : ${total}`;			
+					// console.log(	str );
+					
+					divObj1.innerHTML  +=  str + "<br/>";					
+			}
+			
+			
+				// Unlimited parameters  (spread operator)
+			function   sum( ...ar   )
+			{					
+					var s = 0;
+					
+					// Block Level Variables
+					for(let i = 0; i < ar.length; i++)
+					{  
+						//let  x = 123;
+						s = s + ar[i];
+					}
+					
+			//	alert(i);    //-- throw the error i does not exists after for loop
+			// 	alert(x);
+					
+				//	console.log("Sum Result  : " +  s);
+				
+				divObj2.innerHTML  +=  "Sum Result :  " +  s + "<br/>";		
+			}
+			
+			
+			function   checkConstants()
+			{			
+				// Constants	
+				const  MAX = 100;
+			// 	MAX  = 200;   // error. const variables does not allow to modify
+				console.log("MAX Value : " + MAX);		
+			
+				divObj3.innerHTML +=  "MAX Value : " + MAX;		
+				
+				let n  = MAX * 10;
+			   divObj3.innerHTML +=  "<br/> The value of n :  " + n;
+			}
+		
+		
+		   	function    buttonClick(     )
+			{  			
+					divObj1.innerHTML = "<u>Usage of Default Parameters</u> <br/>";
+					divObj2.innerHTML  = "<u>Working with Unlimited  Parameters</u> <br/>";
+					divObj3.innerHTML  = "<u>Usage of Constants</u> <br/>";
+					
+			
+						getTotalAmount(1500, 3);
+						getTotalAmount(2500);	
+					
+					
+						
+						sum(10,20);
+						sum(10,20, 30);
+						sum(10);
+						sum(10,20,30,40,50,60,70, 80, 90, 100);	
+						sum(10,20,30,40);
+						sum();
+						
+						checkConstants();
+										 					
+			
+		    } 
+		</script>	 
+		 
+	</body>
+</html>

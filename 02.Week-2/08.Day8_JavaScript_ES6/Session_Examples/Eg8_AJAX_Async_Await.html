@@ -1,0 +1,47 @@
+<html>
+<head></head>
+<body>
+<h3>Asynchronous Programming in  JavaScript --- using async / await </h3>
+	<hr/> 
+	
+	<button  onclick="fn_getData()">Get Data </button>
+	<br/><br/>
+	<ul  id="list1"  style="border:2px solid blue; padding:30px;">
+	</ul>
+	 
+	 
+	<script>	 
+	
+		var lstObj = document.getElementById("list1");
+		
+ 
+	async function fn_getData()
+	{ 
+		let url = "https://jsonplaceholder.typicode.com/users"; 1		
+		let response = await window.fetch(url);
+		let  customersArray  = await response.json();
+		displayData(customersArray);  
+	}  
+  
+	
+	
+	function  displayData( dataArray )
+	{
+					let str = "";
+					
+					for(let item of   dataArray)
+					{
+						str  +=  `<li> ${item.name} - <span style="color:blue;">${item.email} </span> </li>`;
+					} 
+
+					lstObj.innerHTML = str;
+	}
+	
+	</script>	 
+</body>
+</html>
+
+
+
+
+

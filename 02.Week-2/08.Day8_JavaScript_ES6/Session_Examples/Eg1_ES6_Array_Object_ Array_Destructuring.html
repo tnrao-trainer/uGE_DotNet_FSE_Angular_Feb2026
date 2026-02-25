@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    <h1>Advanced JavaScript - ES6( Array & Object Destructuring) </h1>
+    <hr/>
+
+    <button  onclick="button1Click()">Button-1</button>
+ 
+
+    <hr/>
+
+    <footer>
+        <mark>Note: Check the console window to see the result.</mark>    
+    </footer>
+
+
+    <script>
+        function button1Click(){
+
+            let ar1 = [10,20,30,40];
+            let obj3 = { uname : "Scott", age : 30, email : "scott@gmail.com" };
+                
+            
+            let [x,y,z] = ar1;
+            let {uname, age} = obj3;
+
+            console.log(x,y,z);
+            console.log(uname);
+            console.log(age);
+            
+           
+        }
+    </script>
+</body>
+</html>

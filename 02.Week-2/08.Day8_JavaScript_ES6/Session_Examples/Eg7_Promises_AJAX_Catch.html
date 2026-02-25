@@ -1,0 +1,55 @@
+<html>
+<head></head>
+<body>
+<h3>AJAX Programming in  JavaScript</h3>
+	<hr/> 
+	
+	<button  onclick="fn_getData()">Get Data </button>
+	<br/><br/>
+	<ol  id="list1"  style="border:2px solid blue; padding:30px;">
+	</ol>
+	 
+	 
+	<script>	 
+	
+var lstObj = document.getElementById("list1");
+		
+		
+	function fn_getData()
+	{ 
+		let url = "https://jsonplaceholder.typicode.com/users"; 
+				
+		window.fetch(url).then( (response)  => 
+		{
+			response.json().then((jsonResponse) => 
+			{
+				let usersArray = jsonResponse;	
+				displayData(usersArray);
+			});	
+		});
+		 
+	}  
+
+
+	
+	function   displayData(  dataArray )
+	{
+			let  str  = "";
+			
+			for(let  item  of  dataArray)
+			{
+				str  +=  `<li> ${item.name} - <span style="color:blue;">${item.email} </span> </li>`;
+			}			
+			
+			lstObj.innerHTML = str;
+	}
+	 
+	
+	</script>	 
+</body>
+</html>
+
+
+
+
+

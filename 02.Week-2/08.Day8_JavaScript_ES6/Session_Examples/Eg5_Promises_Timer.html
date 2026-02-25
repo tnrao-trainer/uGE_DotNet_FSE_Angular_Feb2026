@@ -1,0 +1,44 @@
+<html>
+<head></head>
+<body>
+<h3>Asynchronous Programming in  JavaScript</h3>
+	<hr/> 
+	
+	
+	<div  id="div1"  style="border:2px solid blue; padding:10px;">
+	</div>
+	 
+	 
+	<script>	
+		var divObj = document.getElementById("div1");
+	
+		//1. Create Promise object 
+		const  promiseObj  = new Promise( (resolve, reject)  => 
+		{ 
+				setTimeout(  () =>  
+				{
+					// Write the code to perform long running processes
+					resolve("Promise Resolved :  Content Prepared by Promise");	
+				},  10000);
+				 			 
+		});	
+				
+		divObj.innerHTML =  "Line:22 - Before Promise exeuction";
+		
+		// 2. Subscribe promises 
+		promiseObj.then(  (response) => 
+		{
+			divObj.innerHTML  +=  " <br/> Line:27 - " +  response;
+		});
+				
+		divObj.innerHTML  +=  "<br/>Line:30 -  After Promise exeuction";
+		
+		
+	</script>	 
+</body>
+</html>
+
+
+
+
+
