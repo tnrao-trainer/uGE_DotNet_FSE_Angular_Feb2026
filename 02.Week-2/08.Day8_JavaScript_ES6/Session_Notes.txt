@@ -1,0 +1,100 @@
+Day8:  25th Feb, 2026
+~~~~~~~~~~~~~~~~~~~
+
+
+
+1.  Check asynchronous programming concepts that we discussed yesterday
+2.  What array and object destructuring?
+3.  Why do we use spread operator?
+
+
+
+
+
+
+ES6 -  Advanced JavaScript
+~~~~~~~~~~~~~~~~~~~~~~
+
+>   ECMA Script  6   :   Provide standards for scripting languages
+>   Implemented by JavaScript
+
+
+	a.  Array destructuring 
+	b.  Object destructuring 
+	c.  Default parameters
+	d   string literals 
+	e.   let & const 
+	f.   arrow functions 
+	g.  spread/rest operator 
+	h.  promises 
+	.....
+	
+	 
+  
+ ----------------------------------- 
+ 
+ 
+Array destructuring   and Object destructuring 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    let ar1 = [10,20,30,40];
+	let [x,y,z] = ar1;	// new style 
+	
+	// old style
+	x  = ar1[0]
+	y = ar1[1]
+	z = ar1[2]
+	
+	console.log(x);
+	console.log(y);
+	console.log(z);
+	
+	// Object destructuring 
+	
+	let obj3 = { uname : "Scott", age : 30, email : "scott@gmail.com" };
+	let {uname, age} = obj3;
+	let {uname, email} = obj3;
+	let { email } = obj3;
+	let { email, uname} = obj3;
+	
+	 
+	console.log(uname);
+	console.log(age);
+-------------------------------------------------------------		 	
+Default parameters
+~~~~~~~~~~~~~~~~~
+			
+	getTotalAmount(1500, 3);		//  qty --  3
+	getTotalAmount(2500);			//  qty -- 1
+	
+	// default function parameters 
+	function  getTotalAmount(price, qty = 1)
+	{		
+	
+	}
+	-----------------------------------------------------------------------
+	Usage of spread operator 
+	~~~~~~~~~~~~~~~~~~~~~
+	
+	function  sum(...arr)
+	{
+		
+	}
+	
+	sum(10,20);
+	sum(10,20, 30);
+	sum(10);
+	sum(10,20,30,40,50,60,70, 80, 90, 100);	
+	sum(10,20,30,40);
+	sum();
+	-------------------------
+	
+	 
+	 
+	 
+	 
+	
+	Spread operator vs rest operator
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+	The main difference between the spread operator and the rest operator is that the spread operator expands elements of an iterable (like an array or object) into individual elements, while the rest operator collects multiple elements into a single array or object. 
+	
