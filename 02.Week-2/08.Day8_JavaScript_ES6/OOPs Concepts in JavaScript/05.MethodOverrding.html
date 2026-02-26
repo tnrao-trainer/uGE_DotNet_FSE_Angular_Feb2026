@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Object Oriented Programming in JavaScript</h1>
+    <hr />
+
+    <script>
+        class Vehicle {
+            start() {
+                return "Vehicle is starting.";
+            }
+        }
+
+        class Car extends Vehicle {
+            start() {
+                return `Car is starting. ${super.start()}`;
+            }
+        }
+
+        const c1 = new Car();
+        console.log(c1.start()); // "Car is starting. Vehicle is starting."
+
+
+
+        let  obj;
+
+        obj = new Vehicle();
+        console.log(  obj.start() );
+
+        obj = new Car();
+        console.log(  obj.start() );
+
+    </script>
+
+</body>
+
+</html>

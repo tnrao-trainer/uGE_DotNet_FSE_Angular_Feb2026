@@ -1,0 +1,63 @@
+<html>
+<head></head>
+<body>
+<h3> JavaScript 6 (ES6)  -  Object Oriented Programming  </h3>
+	<hr/>
+<input type="button"  onclick="fn_button1Click()"  value="Get Data" />
+ 
+	<script>	
+		class  Person
+		{
+				name  = "";
+				age = 0;
+				
+			   constructor( name, age)
+			   {
+					console.log("Message from parent class constructor");
+					this.name  =  name;
+					this.age  = age;
+			   }
+	   }
+		
+		
+		class  Employee  extends   Person
+		{		
+			empid  = 0;
+			job  = "";
+			
+			   constructor(name, age, empid, job)
+			   {			
+					super(name, age);	//  invokes parent class constructor	  
+					this.empid  = empid;
+					this.job  = job;
+					console.log("Message from child class constructor");
+			   }	
+			   
+			   showDetails()
+			   {
+					console.log(`Name :  ${this.name}, Age : ${this.age}, Empid : ${this.empid}, Job : ${this.job}`);
+			   }
+		}
+		  
+				
+		function fn_button1Click()
+		{
+			var emp1 = new Employee("Scott", 25, 46548, "Lead");
+		   emp1.showDetails();
+	 
+		}
+		
+		
+		
+		
+	
+	</script>	 
+	
+	
+</body>
+</html>
+
+
+
+
+

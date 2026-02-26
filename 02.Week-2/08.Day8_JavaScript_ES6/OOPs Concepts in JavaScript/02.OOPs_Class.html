@@ -1,0 +1,50 @@
+<html>
+
+<head></head>
+
+<body>
+	<h3> JavaScript 6 (ES6) - Object Oriented Programming </h3>
+	<hr />
+	<input type="button" onclick="fn_button1Click()" value="Get Data" />
+
+	<script>
+
+		class Person
+		{
+			name  = "";
+			age = 0;
+
+			 
+			constructor(name = "", age = 0)
+			{
+				this.name = name;
+				this.age = age;
+			}
+
+			showDetails()
+			{
+				let str  = `Person Details - Name :  ${this.name}, Age:  ${this.age}`;
+				console.log(str);
+			}
+
+		}
+
+
+
+
+		function fn_button1Click() {
+
+			let p1 = new Person();  // default 
+			let p2 = new Person("Scott");  // default 
+			let p3 = new Person("Smith", 27);  // param
+
+			p1.showDetails();
+			p2.showDetails();
+			p3.showDetails();
+		}	
+	</script>
+
+
+</body>
+
+</html>

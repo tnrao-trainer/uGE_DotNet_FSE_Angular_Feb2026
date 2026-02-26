@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Object Oriented Programming in JavaScript</h1>
+    <hr />
+
+    <script>
+        class Counter {
+            #count = 0; // Private field
+
+            increment() {
+                console.log("Incremenet method invoked");
+                this.#count++;
+                return this.#count;
+            }
+
+            #privateMethod() {
+                return "This is private!";
+            }
+        }
+
+        const counter = new Counter();
+        console.log(counter.increment()); // 1
+        console.log(counter.increment()); // 1
+        console.log(counter.increment()); // 1
+
+        // console.log(counter.#count); // Error: Private field '#count' must be declared in an enclosing class
+        // console.log(counter.#privateMethod());
+    </script>
+
+</body>
+
+</html>
