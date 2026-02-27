@@ -1,0 +1,59 @@
+Day-10
+~~~~~~~
+
+1. How to create model dialogues in Bootstrap?
+2. How to include Bootstrap icons in the web page?
+3.  How to work with Carousel in Bootstrap?
+
+
+
+
+
+
+
+
+Progress bar in Bootstrap
+~~~~~~~~~~~~~~~~~~~~~
+
+ -->  Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+ 
+Usage:
+	
+		<div class="progress">
+				<div class="progress-bar" style="width: 30%">30%</div>
+		</div>
+
+
+a. progress 
+b. progress-bar  
+c. progress-bar   bg-success
+d. progress-bar  progress-bar-striped
+e. progress-bar progress-bar-striped progress-bar-animated
+
+
+
+Alerts 	messages in Bootstrap
+~~~~~~~~~~~~~~~~~~~~~~~~~
+<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+
+
+a.  <div></div>:		alert   alert-primary
+b.  <a>  tag : 		 alert-link
+c.   <h2> / <p></p>	:		alert-heading
+
+-----------------------------------------------------------------------------------
+
+ 
+Working with Modals in Bootstrap
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parent Div :    <div class="modal" id="div1">
+Child Div :    <div class="modal-dialog" id="div1">
+Content Div :   <div class="modal-content">
+
+		a. Modal Header
+		b. Modal Body
+		c.  Modal Footer  
+
