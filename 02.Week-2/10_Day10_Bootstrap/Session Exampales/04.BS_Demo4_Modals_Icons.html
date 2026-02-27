@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	
+    <title>Bootstrap Example</title>
+	
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+	
+	
+	  <script>
+		function fn_saveData()
+		{
+			//  Code to save the data in server  :   by send ajax call to server
+			  alert("Data is send to server");
+			  
+			  // Closing bootstrap modal box using JavaScript
+			   var modalDomObj = document.getElementById('div1');
+				var modalBSObj = bootstrap.Modal.getInstance(modalDomObj);
+				modalBSObj.hide();
+		}  
+  </script>
+  </head>
+  <body>
+
+	<div class="container  text-center border   m-2">
+			<p  class="display-5"> 
+			<i class="bi bi-house-heart"></i>
+			Working with Modals in Bootstrap </p>
+	</div>
+   
+    <!-- Button used to  trigger modal -->
+		<button type="button" class="btn btn-primary" 
+						data-bs-toggle="modal" 
+						data-bs-target="#div1">
+		Show BS Modal 
+		</button>
+
+<!-- Modal -->
+<div class="modal" id="div1">
+
+<div class="modal-dialog">
+
+  <div class="modal-content">
+  
+	<!-- Modal Header  -->
+    <div class="modal-header">
+		  <h5 class="modal-title">Modal title</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+	
+	<!-- Modal Body  -->
+    <div class="modal-body  text-primary">
+    Woo-hoo, you're reading this text in a modal!
+    Woo-hoo, you're reading this text in a modal!
+    Woo-hoo, you're reading this text in a modal!
+    </div>
+	
+	<!-- Modal Footer  -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="button"  onclick="fn_saveData()" class="btn btn-primary">Save changes</button>
+    </div>
+  
+  </div>
+
+</div>
+
+</div>
+     
+
+  </body>
+</html>

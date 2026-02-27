@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+	
+	 
+  </head>
+  <body>
+
+	<div class="container  text-center border   m-2">
+			<p  class="display-5"> 
+			<i class="bi bi-bootstrap-fill"></i>
+			Working with Forms in Bootstrap </p>
+	</div>
+   
+   
+   <div class="container   border  p-3  m-2 w-75">
+	 	<form  id="form1" action="server_page.php" class="needs-validated">  	 
+				
+				<div class="mb-3 mt-3">
+					  <label for="uname" class="form-label">Username:</label> 
+					  <div class="input-group mb-3">
+						  <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+						  <input type="text" class="form-control" placeholder="Enter Username" required />
+						   <div class="valid-feedback">Valid.</div>
+							<div class="invalid-feedback">Please fill out this field.</div>
+					</div>
+				</div>
+				
+				  <div class="input-group mb-3">
+					  <input type="password" class="form-control" placeholder="Enter Password" required />
+					 <span class="input-group-text"><i class="bi bi-key-fill"></i></span>
+				</div>
+			
+			<!-- Floating labels -->
+			<div class="mb-3 mt-3">
+				 <label for="email">Email Id</label>
+				<div class="form-floating mt-3 mb-3">
+					  <input type="email" class="form-control" id="email" placeholder="Enter Email">
+					  <label for="email">Enter Correct Email Id</label>
+				</div>
+			</div>
+					
+				<div class="mb-3 mt-3">
+					  <label for="pwd">Select User Type : </label>
+					<select class="form-select">				 
+						  <option>Admin</option>
+						  <option>Customer</option>
+						  <option>Guest</option>
+					</select>
+					</div>
+				
+				  <button type="submit"  onclick="register_click()"  class="btn btn-primary">Register</button>
+		</form>
+   </div>
+     
+	 
+		  
+		<script>
+		
+			function  register_click()
+			{
+					var formObj = document.getElementById("form1");
+					formObj.classList.add("was-validated");
+			}
+		
+		</script>
+	 
+	 
+
+  </body>
+</html>
