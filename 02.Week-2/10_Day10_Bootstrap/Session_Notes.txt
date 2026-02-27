@@ -57,3 +57,61 @@ Content Div :   <div class="modal-content">
 		b. Modal Body
 		c.  Modal Footer  
 
+------------------------------------
+
+Pagination  in Bootstrap
+~~~~~~~~~~~~~~~~~~~~~~~
+
+-->  Pagination is the process of dividing large sets of digital content or search results into smaller, discrete, and numbered pages. It enhances user experience by reducing cognitive load, improves website performance by loading fewer items at once, and aids SEO by allowing search engines to index extensive content more efficiently.
+
+-->  UL:			<ul  class="pagination">
+-->  LI : 			<li  class="page-item">
+						<li  class="page-item  active">  
+-->  A :			<a  class="page-link"></a>
+
+
+		
+---------------------------------------------------------------------------------------------------
+
+Working with Forms 
+~~~~~~~~~~~~~~~~~~~~
+
+
+
+<form/>			----			class="needs-validated"
+										class="was-validated"
+										
+				
+
+  <input type="email" class="form-control"  />				
+									
+										
+<div  class="valid-feedback">Valid..!</div>
+		---  Message that will display when validation pass. 
+		
+<div  class="invalid-feedback">User Name is required</div>
+		---  Message that will display when validation fail. 
+
+
+Floating labels
+~~~~~~~~~~~~~~
+
+ <div class="form-floating">
+	  <input type="email" class="form-control" name="email" placeholder="Email Id">
+	  <label for="email">Enter Email Id </label>
+</div>
+
+
+
+Drop-Down List:
+
+		<select class="form-select">
+			....
+		</select>
+
+
+
+
+
+
+		
