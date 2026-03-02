@@ -1,0 +1,222 @@
+Day11  -  jQuery -   2nd March, 2026
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.  What is Anonymous functions in JavaScript?
+2.   What are the diff. types of selectors in CSS?
+3.   DOM Traversing   VS   DOM Manipulations in JavaScript?
+4.  Advantages of JavaScript Libs./Frameworks?
+
+
+-------------------------------------------------
+
+
+
+Introduction to jQuery
+~~~~~~~~~~~~~~~~~~~
+What is jQuery?
+
+jQuery is a fast, small, and feature-rich JavaScript library.
+
+It makes things like 
+	a.  HTML document traversal  (DOM Traversing)
+	b.  manipulation  (DOM manipulation)
+	c.  event handling
+	d.  animation
+	e.  Ajax 	(Server Communication)
+
+Note:
+--->  much simpler 
+--->  an easy-to-use API    (collection of pre-defined methods)
+--->  works across a multitude of browsers (supports all browsers)
+
+
+
+Import jQuery Library
+~~~~~~~~~~~~~~~~~~~~
+
+	<script  src="https://code.jquery.com/jquery-4.0.0.js">		
+	</script>
+
+	<script>
+		
+	</script>
+-------------------------------------------------------------
+	
+
+	<p id="p1"></p>
+
+
+JavaScript
+	let paraObj = document.getElementById("p1");
+	paraObj.innerText = 'Hello World';
+	
+jQuery
+				jQuery("#p1").text("Hello World");
+				$("#p1").text("Hello World");
+				
+	
+------------------------------------------------------------------------------------	
+
+	
+	
+
+
+	<script>
+		// perform the operations using jQuery
+	</script>
+	
+	
+	
+	
+document.ready()
+~~~~~~~~~~~~~~~~~~
+
+The $(document).ready() function in jQuery is used to execute JavaScript code as soon as the Document Object Model (DOM) is fully loaded and ready for manipulation. 
+
+It is the standard way to ensure that the HTML structure is available to your scripts, preventing errors that might occur if you try to access elements before they are created.
+
+
+
+
+
+-------------------------------------------------------------------------------------------
+
+jQuery Programming
+~~~~~~~~~~~~~~~~~~
+ 
+
+jQuery 	= 	$ 		-->		 factory function 
+
+  
+
+jQuery:
+	$("#p1").html("Message prepared using jQuery");
+	
+javascript:
+	document.getElementById("p1").innerHTML =  "Message prepared using jQuery";
+
+
+Selectors in jQuery
+-----------------------------
+Access html elements  (dom traversing)   :  
+
+$("tagname")
+$("#id")
+$(".classname")
+$("parent  child")
+$("h1,   p") 
+$("*") 
+
+$(document)
+$(this)
+
+----------------------------------------------------
+Access content
+~~~~~~~~~~~~~~
+1.   html()			---			innerHTML
+2.   text()				---			innerText
+3.   val()				---				value			(input, textarea, select)
+4.   attr("name", "value")
+
+		$("#img1").attr("src", "Image1.jpg")		// set 
+		$("#img1").attr("width", "500")			// set 
+		
+		let  str  =  $("#img1").attr("src");		// get 
+		
+		
+		$("#t1").val("Hello");  	// set 
+		let str  =  $("#t1").val();  	// get 
+
+	
+		$("#p1").text("Hello");	  // set
+		let  str  =  $("#p1").text();	// get 
+
+
+
+
+
+Event Handling 
+~~~~~~~~~~~~~
+
+JavaScript:
+		<input type="text"  onclick="fn_getData()"  value="Get Data" / >
+		
+		function  fn_getData()
+		{
+			.....				
+		}
+		
+jQuery :
+		<input type="text"  id="b1"   value="Get Data" / >
+		
+	Syntax:	$("#b1").click( callback );
+		
+	Eg:
+		$("#b1").click( function()
+		{
+				// code 				
+		});
+		
+		 
+			
+		
+		
+		
+How to not allowing the user to edit the textbox?
+		
+		<input  disabled  ..... />
+		<input  readonly  ..... />
+		
+		
+		
+		
+
+
+ 
+
+
+
+	$(selector).eventMethod( callback );
+		
+	$(selector).click( callback );
+---------------------------------------------------------------------------------------------
+ 
+Q:  How to change text color of all paragraphs in the document using jquery?
+
+		$("p").css("color", "blue");
+
+
+------------------------------------------------------------------------------------------------
+  
+
+
+
+
+DOM Traversing
+~~~~~~~~~~~~~~~
+
+
+	1.   $("selector").each(callback)
+	2.   $("selector").eq(index)
+	3.   $("selector:even") 
+	4.   $("selector:odd") 
+	5.   $("selector:first") 
+	6.   $("selector:last") 
+	
+	
+	
+	
+DOM manipulation
+~~~~~~~~~~~~~~~~~
+
+1.  append() ,  prepend()
+2.   after(),   before()
+3.   remove(),  empty  
+
+
+
+
+	
+	
+	
+	
