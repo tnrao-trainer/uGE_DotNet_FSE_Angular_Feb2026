@@ -1,0 +1,53 @@
+<!-- Create HTML Page to display Hello World message by using jQuery -->
+<html>
+
+<head>
+</head>
+
+<body>
+	<h3> jQuery Programming - DOM Traversing</h3>
+	<hr />
+
+	<input type="button" value="Using  each - item" id="b1" />
+	<input type="button" value="Using  eq - index" id="b2" />
+
+	<ul id="list1">
+		<li>HTML5</li>
+		<li>CSS3</li>
+		<li>jQuery</li>
+		<li>Angular JS</li>
+		<li>Bootstrap</li>
+		<li>Vue JS</li>
+	</ul>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+	<script>
+
+		$(document).ready(function () {
+
+			$("#b1").click(function () {
+				$("#list1  li").each(function () {
+					alert( $(this).text() );
+				});
+			});
+
+			$("#b2").click(function () {
+
+				const n = $("#list1  li").length;
+
+				for(let i =0; i < n; i++)
+				{
+					alert( $("#list1  li").eq(i).text() );					
+				}
+			});
+
+		});
+
+	</script>
+
+</body>
+
+</html>

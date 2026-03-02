@@ -1,0 +1,34 @@
+<html>
+
+<head></head>
+
+<body>
+	<h3>Web Programming --Mouse Event Handling </h3>
+	<hr />
+
+
+
+
+	<br /><br />
+	<img src="Images1/Image1.jpg" class="c1" border="2" width="80" height="80" />
+	<img src="Images1/Image2.jpg" class="c1" border="2" width="80" height="80" />
+	<img src="Images1/Image3.jpg" class="c1" border="2" width="80" height="80" />
+	<img src="Images1/Image4.jpg" class="c1" border="2" width="80" height="80" />
+	<img src="Images1/Image5.jpg" class="c1" border="2" width="80" height="80" />
+	<br />
+	<img src="Images1/Image1.jpg" id="bigImg" border="2" width="420" height="420" />
+
+
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$(".c1").mouseover(function () {
+				let str = $(this).attr("src");	// get the current small img src
+				$("#bigImg").attr("src", str);  // set to the big image
+			});
+		});
+	</script>
+</body>
+
+</html>
