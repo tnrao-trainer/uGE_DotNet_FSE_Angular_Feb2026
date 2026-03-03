@@ -1,0 +1,90 @@
+Day12 (03-03-2026)
+~~~~~~~~~~~~~~~~~~~
+
+
+What is DBMS? Advantages over File System?
+Diff.  SQL  vs  SQL Server/Mysql/oracle
+What is Normalization?  
+Check different Normal Forms?
+
+--------------------------------------------------------------------------------------------
+
+
+MS  Sql Server
+~~~~~~~~~~~~~ 
+
+
+
+
+
+
+Authentication  types in  SQL Server:
+			1.   Windows Authentication		---   System login user
+			2.   SQL Server Authentication
+						User Id 
+						Password
+			
+	
+
+------------------------------------------------------------------------------------
+
+Data Types
+~~~~~~~~~~
+int
+bigint
+varchar		---	Non-Unicode (1 byte per character)
+nvarchar	---	(Unicode (2 bytes per character))
+decimal
+datetime / datetime2
+bit
+ 
+ 
+
+
+
+
+
+
+
+
+Constraints
+~~~~~~~~~~~
+
+1.  Primary Key
+		
+		Syntax:    		ColumnName  DataType  Primary Key
+		Eg:    				EmpId  int  Primary Key
+					
+
+
+
+
+
+	>				JoinDate DATE   DEFAULT GETDATE()
+
+
+
+GETDATE() --   pre-defined function that returns system date and time
+
+
+
+
+
+
+
+INSERT INTO Emp VALUES(1025, 'SCOTT','MANAGER',50000, 10)
+INSERT INTO Emp VALUES(1025, 'SCOTT','MANAGER',50000, 10)
+INSERT INTO Emp VALUES(1025, 'SCOTT','MANAGER',50000, NULL)
+
+
+
+INSERT INTO Emp
+VALUES
+(1025, 'SCOTT','MANAGER',50000, 10);
+(1026, 'SCOTT','MANAGER',50000, 10),
+(1027, 'SCOTT','MANAGER',50000, 10),
+
+INSERT INTO Books (BookID, Title, Author, PublicationYear, ISBN, AvailableCopies)
+VALUES
+(1, 'The Great Gatsby', 'F. Scott Fitzgerald', 1925, '9780743273565', 3),
+(2, '1984', 'George Orwell', 1949, '9780451524935', 2);
