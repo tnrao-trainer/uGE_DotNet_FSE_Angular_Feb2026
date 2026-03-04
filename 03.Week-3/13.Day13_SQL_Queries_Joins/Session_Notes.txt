@@ -1,0 +1,81 @@
+
+Day13  -  4th march, 2026
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.  Go through all constraints that we discussed in yesterday session.
+2.  How to use the keywords :    where, group by, having
+3.  What are the diff. types aggregate function? 
+4.  Diff. types of joins in SQL server? 
+
+
+
+ 
+
+ 
+---
+ SQL Server Practice Questions (Emp & Dept Case Study)
+----
+ 1. Basic Queries
+
+1. Display all employee records from the Emp table.
+2. Display employee name and job.
+3. Display employee name and salary.
+4. Display all department details.
+5. Display distinct job roles in the company.
+
+---
+
+ 2. Sorting (ORDER BY)
+
+6. Display employees sorted by salary in ascending order.
+7. Display employees sorted by salary in descending order.
+8. Display employees sorted by name alphabetically.
+9. Display employees sorted by department number then salary.
+10. Display employees with highest salary first.
+
+---
+
+ 3. WHERE Clause (Filtering)
+
+11. Display employees whose salary is greater than 40000.
+12. Display employees working in department 20.
+13. Display employees whose job is 'Manager'.
+14. Display employees whose salary is less than 35000.
+15. Display employees whose salary is between 30000 and 50000.
+
+---
+
+ 4. Filtering with Multiple Conditions
+
+16. Display employees working in department 20 with salary greater than 45000.
+17. Display employees whose job is Developer or Manager.
+18. Display employees not working in department 10.
+19. Display employees whose name starts with 'R'.
+20. Display employees whose salary is not equal to 40000.
+
+ 
+---
+
+
+	5. Aggregate Functions
+
+21. Find the total number of employees.
+22. Find the average salary of employees.
+23. Find the maximum salary in the company.
+24. Find the minimum salary in the company.
+25. Find the total salary paid to all employees.
+
+
+--------------------------------
+
+	6.  GROUP BY  &  Having
+
+26. Display the number of employees in each department.
+27. Display the average salary for each department.
+28. Display the total salary for each department.
+29. Display the maximum salary in each department.
+30. Display departments whose total salary is greater than 80000.
+
+
+ 
+
