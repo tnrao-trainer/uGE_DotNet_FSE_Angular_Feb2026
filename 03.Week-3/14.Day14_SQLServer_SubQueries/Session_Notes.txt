@@ -1,0 +1,70 @@
+Day14 (5th March, 2026)
+~~~~~~~~~~~~~~~~~~~~~
+
+1. Go through all the queries that we discussed yesterday example
+2. Why do we use sub-queries?
+3. Joins  vs sub-queries
+4. Diff. types of Set operators in SQL Server
+
+
+Subquery
+Set Operators
+Modifying data
+Expressions
+
+ 
+ 
+
+	Emp   	---		15	( 12 +  3)
+	
+	Dept 	----		6  ( 4  +  2)
+	
+	
+		Ename,  Dname 
+		
+		Inner Join 	---		12	    (only matched)
+		Left Join 	---		15	    ( matched + unmatched from left)
+		Right Join 	---		14		( matched + unmatched from right)
+		Outer Join ---		17		( matched + unmatched from left and right)
+		
+-------------------------------------------------------------------------------------------		
+		
+Working with Sub queries
+~~~~~~~~~~~~~~~~~~~~~~
+
+--  Correlated Sub Queries 
+SELECT Ename, Salary, Deptno
+FROM Emp E1
+WHERE Salary >
+      (SELECT AVG(Salary)
+       FROM Emp E2
+       WHERE E2.Deptno = E1.Deptno);
+
+How it Works:	
+a.  The outer query selects each employee.
+b. The inner query calculates the average salary of that employee's department.
+c. The employee's salary is compared with that department average.
+d. If the salary is higher, the employee is displayed.
+
+
+
+
+		
+	Find employees who earn the highest salary in their department.	
+		
+		
+		SELECT Ename, Salary, Deptno
+FROM Emp E1
+WHERE Salary =
+      (SELECT MAX(Salary)
+       FROM Emp E2
+       WHERE E2.Deptno = E1.Deptno);
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
