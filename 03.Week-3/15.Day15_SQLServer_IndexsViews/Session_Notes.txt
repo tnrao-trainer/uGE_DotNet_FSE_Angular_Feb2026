@@ -1,1 +1,8 @@
   
+
+Day-15  (6th March, 2026)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Why do we use indexes in SQL Server?
+2. Diff. types of indexes?
+3.  Why do we use views in SQL Server? 
