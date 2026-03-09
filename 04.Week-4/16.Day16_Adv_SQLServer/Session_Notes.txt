@@ -1,4 +1,3 @@
- 
 Day16 
 ~~~~~~ 
 
@@ -13,7 +12,7 @@ Triggers and Cursors
 ---------------------------------------------------------
 
 
-Working with Stored Procedures in  SQL Server
+1.  Working with Stored Procedures in  SQL Server
 -------------------------------------------------------------------
 
 
@@ -76,9 +75,30 @@ Step-2:
    
    
    
-   
-   
-   
+ 2.  User-Defined Functions
  
+ 
+a.  User-Defined Functions (UDFs) in SQL Server are reusable routines that accept parameters, perform an action (such as a complex calculation or data retrieval), and return the result as a value or a result set. 
+ 
+b. They help in modular programming, reduce network traffic, and can improve performance by caching execution plans.
+
+
+
+
+1.  Scalar Functions: These functions return a single data value of a predefined scalar type (e.g., INT, VARCHAR, FLOAT). The function body is typically enclosed in BEGIN...END blocks and can contain multiple T-SQL statements to achieve a result.
+
+2. Table-Valued Functions (TVFs): These functions return a TABLE data type (a result set of rows and columns).
+
+   
+   
+IS NULL Operator:     
+		SELECT * FROM Emps WHERE Deptno IS NULL;
+   
+   
+ISNULL()  function :    It allows you to replace the NULL value with a specified replacement value 
+   
+ISNULL(@Total, 0)		
+					If @Total is Null, then it replace with zero
+					If @Total, not null ,  it returns the value of @Total as it is
    
    
