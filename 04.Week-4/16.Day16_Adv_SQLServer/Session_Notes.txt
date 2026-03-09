@@ -1,1 +1,84 @@
  
+Day16 
+~~~~~~ 
+
+Advanced SQL Server Concepts:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Stored Procedures
+User-Defined Functions
+Triggers and Cursors
+
+
+---------------------------------------------------------
+
+
+Working with Stored Procedures in  SQL Server
+-------------------------------------------------------------------
+
+
+A stored procedure in SQL Server is 
+		a precompiled 
+		collection of one or more SQL statements and 
+		optional control-of-flow logic 
+				(like IF and WHILE statements,
+				and TRY-CATCH blocks) that is 
+		stored as a named object in the database.
+		
+
+
+
+
+
+    USP --- user defined stored PROCEDURE    (prefix)
+
+Step-1:  Create Procedure
+
+	CREATE PROCEDURE  usp_getEmpCount
+			--  Parameter declarations
+	AS
+	BEGIN
+				-- statements 
+	END;
+
+		
+Step-2:
+   EXECUTE  usp_getEmpCount
+   EXEC 		 usp_getEmpCount
+   
+   
+   ----------------------------------------------------------------
+   
+   
+   SELECT @param_empCount=  Count(*) FROM Emp WHERE Deptno=@param_deptno;
+   
+   
+   
+     Print ('No. of Employees working in ' + @dname + ' : '+  CAST(@param_empCount AS VARCHAR));
+   --------------------------------------------
+   
+   
+   
+   function  printDetails( studentObj )
+	{
+		
+	}
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   -----------------------------------------------
+   
+   
+   
+   
+   
+   
+ 
+   
+   
