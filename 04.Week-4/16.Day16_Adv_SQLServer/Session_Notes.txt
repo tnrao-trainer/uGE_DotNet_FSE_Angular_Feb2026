@@ -1,4 +1,4 @@
-Day16 
+ Day16 
 ~~~~~~ 
 
 Advanced SQL Server Concepts:
@@ -102,3 +102,27 @@ ISNULL(@Total, 0)
 					If @Total, not null ,  it returns the value of @Total as it is
    
    
+   -------------------------------------------------------
+   
+   Cursors in SQL Server
+   ~~~~~~~~~~~~~~~~~~
+   
+   -->  In SQL Server, a cursor is a database object used to process a result set one row at a time, instead of using the default set-based operations. 
+   
+   -->  They are useful for tasks that require row-by-row logic, such as administrative tasks or specific conditional updates, but are generally discouraged for performance-critical operations involving large datasets.
+   
+   
+   
+Cursor Lifecycle in SQL Server (T-SQL)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The process of using a cursor involves five main steps: 
+
+1.  Declare: Define the cursor with a name and the SELECT statement that populates its result set.
+
+2. Open: Execute the query and load the result set into the cursor work area.
+
+3. Fetch: Retrieve a single row from the current position into local variables. This process is repeated, typically within a WHILE loop, using @@FETCH_STATUS to check if more rows exist.
+
+4.  Close: Release the current result set and unlock the tables.
+
+5.  Deallocate: Remove the cursor definition and free up all associated system memory resources.
