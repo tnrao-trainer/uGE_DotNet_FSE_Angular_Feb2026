@@ -1,0 +1,35 @@
+Day-17
+~~~~~~~
+
+a.  Exception Handling
+b.  Transactions 
+
+
+
+ACID properties
+~~~~~~~~~~~~~~~
+ACID properties in databases—Atomicity, Consistency, Isolation, and Durability—guarantee reliable transaction processing, ensuring data integrity even during failures. 
+
+These properties ensure transactions are 
+	---	all-or-nothing (Atomicity), 
+	---  valid (Consistency), 
+	---  independent (Isolation), 
+	---  permanent (Durability). 
+	
+They are crucial for maintaining consistent, error-free database states.
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
