@@ -1,0 +1,255 @@
+Day-18 
+~~~~~~
+
+What is Assembly in .NET?
+
+In .NET, an assembly is a fundamental building block, serving as a compiled unit of code that the Common Language Runtime (CLR) executes. It is the smallest unit of deployment, versioning, reuse, and security in a .NET application. Assemblies are implemented as either executable files (.exe) or dynamic link libraries (.dll).
+
+
+What is GAC?
+
+The Global Assembly Cache (GAC) in .NET is a machine-wide, centralized repository (located in %windir%\Microsoft.NET\assembly) that stores shared, strongly-named .NET assemblies, enabling code reuse across multiple applications and preventing "DLL hell". It facilitates side-by-side versioning, allowing different versions of the same DLL to coexist. 
+
+
+
+
+C# Programming :  Data Types , Variables 
+
+
+
+
+
+
+int  x ;
+
+  x =   int.Parse("123");
+  x =   int.Parse("Hello");
+
+
+
+int.TryParse()
+~~~~~~~~~~~
+The TryParse method in C# is a static method used to safely convert a string representation of a value into a specific data type without throwing an exception if the conversion fails. Instead of an exception, it returns a boolean value indicating whether the conversion was successful, making it ideal for handling user input or external data where the format is not guaranteed.
+
+
+--------------------------------------------------
+
+
+
+
+Value Types and Reference Types
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Value Types :		Primitive data types 
+							int, bool, double, etc.. 
+
+Reference Types :   Objects,   Classes,  Interfaces, Delegates 
+
+----------------------------------------------------------------------------------------
+
+
+What is System.Object   in C#?
+
+	-->  System.Object : 	Ultimate base class of all other types in the .NET type system.
+
+	-->   This means every class, struct, enumeration, delegates or interface in C#, whether predefined or user-defined, directly or indirectly inherits from System.Object.
+	
+	
+
+What is boxing and unboxing?
+
+
+Boxing in C# converts a value type (e.g., int, struct) to type object (reference type) on the heap, while unboxing converts it back to a value type.
+
+Boxing is implicit, unboxing is explicit and requires a cast. 
+
+These processes allow value types to be treated as objects but introduce performance overhead due to memory allocation. 
+
+
+Applications of boxing / unboxing in C#:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		--->    Collections classes are developed using Object as data type. 
+		--->    Working based on boxing and unboxing
+		
+						ArrayList  arList = new ArrayList();
+						arList.Add(10);		//  boxing 
+						arList.Add(20);
+						
+						int x = (int)  arList[0];   // unboxing  
+		
+-------------------------------------------------------------------------------
+
+
+Operators :
+	+  -  *  /  %
+	<   <=    >   >=   !=    == 
+	&&    ||    !
+	++     --
+	+=   -=    /=   *=  
+	
+	 
+
+
+Control Structures:
+
+		if
+		if..else
+		switch
+		loops: 	while, do...while,  for
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+namespace :   logical grouping of the types(classes)
+
+	
+		Types:
+					1.  Classes 
+					2.  Interfaces
+					3.  Delegates					
+					4.  Structures
+					5.  Enumerations 
+
+
+
+	byte,  short,  int , long 
+	
+	float, double , decimal 
+	
+	string,  char
+	
+	bool 
+	--------------------------------------------
+	DateTime 
+
+
+
+Convert.ToInt32()
+Convert.ToInt64()
+
+
+
+
+
+Implicitly typed local variables 
+
+	var  x = 10;
+	
+	x = "Hello";	// error
+	
+
+		a.  Implicitly   ---   automatically type will be decided 
+		b.  typed 			---   strongly typed 
+		c.  local variables   ---   inside the methods 
+
+
+When do we use var?
+	1.   LINQ   Programming
+	2.   Anonymous Types
+	3.   Simplify the variable declarations / assignments when you  have complex types. 
+
+var  x  =  ........;
+
+
+		
+	   {	
+			
+			
+			   return Ok(new { Status = "New Employee resource created in server" });
+		}
+	
+	
+	  var x= 10;
+	  var y = 20;
+	  
+		Sum(x,y);
+		
+		
+		
+		void Sum(int   x, int y)
+		{
+			
+		}
+		
+	---------------------------------------------------
+	
+	
+	
+	
+	Collections:
+	
+			
+			ArrayList		-			C# 1.0
+			List<T>			-			C# 2.0 
+			
+			
+			ArrayList   arList = new ArrayList();
+			arList.Add(10);		// boxing 
+			arList.Add(20);
+			.....
+			
+			
+			int x =  (int) arList[0];   //  unboxing 
+			
+			
+			
+using System.Collections;			//   ArrayList
+using System.Collections.Generic;			// List<T>
+	
+	
+What is the significance of  is operator?
+
+	a.  The is operator checks if the result of an expression is compatible with a given type.
+	b.  It is about the type-testing is operator
+	
+		
+	object obj = 'a';
+	if (obj is char)
+	{
+		Console.WriteLine("It's a char");
+	}
