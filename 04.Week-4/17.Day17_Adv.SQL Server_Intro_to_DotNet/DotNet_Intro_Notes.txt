@@ -1,0 +1,73 @@
+.NET Introduction 
+~~~~~~~~~~~~~~
+
+
+
+C# Code   :  Program Structure
+~~~~~~~~ 
+
+using System;
+
+namespace ConsoleApp8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Hi Narasimha, Good afternoon...!");
+
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+
+1.    using  System;
+		--->   using keyword used to importing namespace.  
+		--->   System  --- pre-defined namespace
+		-->    "Console"   class belongs to System namespace
+		-->    What is namespace?
+						---  Collection of classes / types 
+						
+2.    namespace ConsoleApp8
+			
+			---    Every project is created with new namespace same as project name 
+			---    Groping all classes that we are creating in the project as namespace
+					Namespace :		ConsoleApp8
+					Class :		Program
+					
+3.    internal class Program
+		--- Program is a class which contains entry point (Main Method)
+		---  Class Name :  Program
+		--- Program.cs File 
+		--- "internal"  :  keyword refers the classes that can access within the project only 
+		
+	
+4.    static void Main(string[] args)		----   Entry Point , execution statrs from this line
+			
+			- Should be Main method  
+			-  Should be static  
+			-  void  ---   does not return anything 
+			
+5.   Console.WriteLine("Hello, World!");
+ 
+		-->  Console  is class
+		-->  WriteLine method to display output  
+		-->  ReadLine()  ---  used to read data from the user 
+		
+		Note:  In this example,  ReadLine()  is used to for cursor waiting to see the output
+		
+		
+		
+		
+Data Types in C#
+~~~~~~~~~~~~~~	
+		byte/short/int/long
+		float/double/decimal 
+		char/string 
+		bool 
+		
+		
