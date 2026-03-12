@@ -1,0 +1,230 @@
+OOPs in C#
+~~~~~~~~~~~
+
+ 
+
+What is Class?
+	--> Template for objects. 
+	--> Define Content in the object 
+			---  data / state /  props /  fields 
+			---  methods /  member functions / behaviour 
+
+
+class  ClassName{	
+		//  data		
+		// methods 		
+}
+
+
+Class Name :      
+			Student, Console, Array, Object,  SqlConnection, SqlDataAdapter, BankAccount
+			
+------------------------------------------------------------------------------
+
+Members of the Class
+~~~~~~~~~~~~~~~~~~
+
+
+Private variables :   create private variables using  underscore as pre-fix.
+
+	  private string _name;    
+	  private string _age;
+  
+  
+ Methods:  Methods are used to access the data through object.
+ 
+			--   access the private data 
+			--   perform operations on the data 
+			
+			
+			public  void ShowDetails()
+			{
+				Console.WriteLine(_name);
+				Console.WriteLine(_age);
+			}
+ 
+		
+  
+  
+  
+ Creating Objects
+ ~~~~~~~~~~~~~~~~~
+ 
+ ClassName obj1 =  new ClassName();
+ 
+ obj1.PrintDetails();
+  
+  
+  
+  Person personObj = new Person();
+  Person obj = new Person();
+  Person person1 = new Person();
+  Person p1 = new Person();
+  Person person = new Person();
+
+  
+  ------------------------------------------------------
+  
+  
+  Person personObj2 = null;
+personObj2.PrintDetails();		//  Exception :   System.NullReferenceException
+  
+  
+  System.NullReferenceException: 'Object reference not set to an instance of an object.'
+
+ 
+  -----------------------------------------------------------------------
+  
+  Constructor
+  ~~~~~~~~~~~
+  
+	
+	public    ClassName(parameters)
+	{
+		// Initialize the private variables 
+	}
+  
+  ----------------------------------------------------------------------------------------
+  
+  
+  
+class Person
+ {  
+     private  int _age;
+	 
+	 public int   GetAge(){  return  _age;  }	 
+	public  void SetAge(int   age) {  
+	
+		 if(age > 0  &&  age <  100)
+			_age =  age;
+		else
+			 Console.WriteLine("Invalid Age")
+	}
+	 
+  }
+    
+  Person  p1  = new Person();
+  
+  
+   p1._age = -25;  	// allowed
+   p1._age = 125;  	// allowed
+   p1._age = 2026;  	// allowed
+ 
+ 
+	p1.SetAge(25);	//  Write 
+	Console.WriteLine(  p1.GetAge() );  // Read
+ 
+	
+  
+  
+  
+  
+  
+  
+  
+  
+ Properties
+ ~~~~~~~~~
+ 
+ -->   In C#, properties are members that provide a flexible and controlled way to read, write, or compute the values of private fields. 
+ 
+ --> They combine aspects of both fields and methods, appearing like fields to the user but allowing for encapsulation logic (such as validation or data hiding) behind the scenes through special methods called accessors.
+ 
+  
+  
+  private string _name;
+  
+   public  string  Name  
+  {
+	  get
+	  {  
+		return _name;   
+	}		
+	  set
+	  {  
+		 // logic 
+	     _name =  value;  
+		}
+  }
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ Assignment
+ ~~~~~~~~~~~~~~
+  
+ Write  a  C# program to process product details using object oriented programming.
+ 
+•	Class should contain private variables:  productId, productName, unitPrice, qty.
+•	Constructor should allow productId as parameter
+•	 Create properties for all private variables. Property Names :   ProductId, ProductName, UnitPrice, Quantity
+•	ProductId – should be readonly property
+•	ShowDetails()  method to display all the details along with total amount. 
+
+
+
+
+
+
+
+Auto-Implemented Properties:
+
+ class Person
+ {
+     public int Age { get; set; }
+     public string Name { get; set; }
+ }
+ 
+ 
+ 
+ // Read-Only 
+  public int Age { get;  private  set; }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  Employee 
+  
+		EmployeeId
+		Name
+		Job
+		Salary
+		Deptno
+		
+		
+		
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  Study the following items:
+  
+	1.  Guid (System)
+	2.  Regex Class   (System.Text.RegularExpressions)
+	
+
