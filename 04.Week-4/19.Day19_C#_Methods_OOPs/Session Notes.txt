@@ -1,0 +1,139 @@
+Day19 
+~~~~~~
+
+
+1. Why do we use "var"  keyword in C#?
+
+		var  x = 10;
+		var  str  = "Hello";
+		
+
+2. What are Nullable Types in C#?  Why do we use?
+
+	--  allow value types can store nulls
+	
+		int?   x  = 10;
+		x = null;
+		
+		
+		if(x.HasValue == true)
+		{
+			// process the value
+		}
+		
+		 	
+
+3. What is the significance of  "is"  and "as"  operators in C#?
+
+
+------------------------------------------
+
+ 
+Working with Methods in C#
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+return_type      method_name(parameters)
+{
+	// body of the method 
+	// return statement
+}
+
+
+
+
+Naming Standards for Method Name
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.   Pascal Casing 
+		WriteLine()
+		Write()
+		Greeting()
+		GetCurrentTime()		 
+		....
+		
+	
+2.  Method name should include what action that perform and on what data your are processing:
+	
+		AddEmpoyee()
+		UpdateEmployee()
+		GetEmployeeById()
+		GetEmployees()
+		DeleteEmployee()
+		
+		
+		
+		
+	 
+	 
+Parameters:
+		 (string uname)
+		 (int  x, int  y)
+		 (int[]  numbers)
+		 (Employee   obj)
+		 (List<Employee>   empList)
+		 
+		 
+		 
+		 
+		 
+		 
+Special Types of Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~
+1.  Default Parameters
+2.  Unlimited parameters  / Params Array.BinarySearch
+3.  Call by Ref  Parameters
+
+			void Swap(ref int x, ref int y)  { ...  }
+			
+			Swap(ref   a,  ref  b);
+			
+4.   Out parameter 	
+		
+		 static void Divide(int dividend, int divisor, out int quotient, out int reminder) { ....  }
+		
+		  Divide(x, y, out resultQuotient, out resultReminder);
+			
+	
+
+Q:   Diff. between ref and out keywords?
+
+Ans :  	The ref and out keywords in C# are both used to pass arguments by reference, which allows a method to modify the original variable in the calling method. The key differences lie in initialization requirements and data flow.  	 
+		 
+------------------------------------------------------------------------
+	
+	
+Which of the following is valid syntax for a method with an optional parameter?
+
+A. void Print(string name, int age = 18)
+B. void Print(string name = "John", int age)
+C. void Print(optional string name, int age)
+D. void Print(string name, optional int age = 18)
+
+---------------------------------------------------------------------------------
+What is the output of this code?
+ 
+static  void SayHello(string name = "Guest") 
+{
+    Console.WriteLine($"Hello, {name}!");
+}
+
+SayHello();
+ 
+---------------------------------------------------------------------------------
+ 
+ Correct or Not?
+ 
+   int x = 34, y = 5; 
+   Divide(x, y, out int  resultQuotient, out int  resultReminder);		
+
+
+
+
+
+
+
+
+
+
