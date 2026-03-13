@@ -1,0 +1,38 @@
+Day20
+~~~~~~
+
+
+1.  What is encapsulation in OOPS?  How to implement in C#?
+2.  When do we use "this"  and "base" keywords?
+3.  What is managed code?    What is unmanaged code?    (It is related to .net CLR)
+
+
+
+
+public decimal  Balance { 
+
+		get
+		{
+			
+			return _balance;
+		}
+}
+
+
+
+public decimal  Balance { get; private set; }
+
+
+
+
+
+
+
+
+
+
+Expression-Bodied Members
+
+
+public void Display() => Console.WriteLine("Hello");		//   C#  7.0+ 
+
