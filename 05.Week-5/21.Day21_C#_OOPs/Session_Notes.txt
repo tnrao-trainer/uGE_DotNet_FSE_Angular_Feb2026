@@ -50,10 +50,35 @@ Base Keyword
 Polymorphisim
 ~~~~~~~~~~~~~~
 
+1.  Overloading :    Defining same with method with different parameters
+			
+				Console.WirteLine(int)
+				Console.WirteLine(string)
+				.... 
+				
+			
+			Diff. in parameters:		type,  number,  order of 
+			
+			
+			
+	int    M1()
+	
+	void   M1()
+	
+	
+	
+	int x =   obj.M1();	  // Error, both are having same no. of parameters 
+			
+	
+				
+2.  Overriding :   	Redefining parent class method inside the child class. 
+								Involves inheritance. 
+								
+	
 
 
-1.  Overloading 
-2.  Overriding 
+Runtime Polymorphisim:		Any child class instances(objects) can store in parent class references.	
+------------------------------------------------------------------------------------------------
 
 
 
@@ -100,4 +125,18 @@ Has A  realtionships
 		
 	
 	
-	 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
