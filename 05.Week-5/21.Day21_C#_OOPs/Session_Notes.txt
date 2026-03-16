@@ -1,0 +1,103 @@
+
+
+Inheritance   (Is A  realtionship)
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+	class   BaseClass
+	{
+		// define base class members 
+	}
+	
+	class ChildClass  :    BaseClass
+	{
+		// define child class members 
+	}
+	
+	
+	
+	
+							Within	 Class					Child Class 					using Object (Outside)
+----------------------------------------------------------------------------------------------------------------
+private					Yes									No							No
+
+protected 				Yes 									Yes							No
+
+public 						Yes									Yes							Yes
+
+
+
+
+
+Base Keyword
+~~~~~~~~~~~~
+
+1.   Invoke the base class constructor from child class 
+
+		   public Employee(int id, string name) : base(name)
+		   {
+			   EmployeeId = id;
+		   }
+
+2.   Invoke parent class methods inside the child class 
+
+			 base.ShowDetails();
+
+
+
+
+
+Polymorphisim
+~~~~~~~~~~~~~~
+
+
+
+1.  Overloading 
+2.  Overriding 
+
+
+
+
+
+
+Method Overriding 
+~~~~~~~~~~~~~~~~~
+
+
+Parent :		virtual keyword
+
+		 public virtual void ShowDetails()  { ....  }
+
+Child :			override 
+
+	 public override  void ShowDetails()  { ....  } 
+	 
+	 
+	 
+	 
+Has A  realtionships
+~~~~~~~~~~~~~~~~
+	
+	class Address
+	{
+		 public string Street { get; set; }
+		public string City { get; set; }
+		public string PinCode { get; set; }
+	}
+	  
+	
+	
+	class Employee
+    {
+        public int EmployeeId { get; set; }
+        public string Name { get; set; }
+        public double Salary { get; set; }
+		public   Address	  Address {  get;  set; }
+		 
+	}
+		
+		
+		
+	
+	
+	 
