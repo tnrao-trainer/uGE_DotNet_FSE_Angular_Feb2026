@@ -125,18 +125,54 @@ Has A  realtionships
 		
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+---------------------------------------------------------
+
+Types of classes
+~~~~~~~~~~~~~
+Regular Class (Concrete Class)	 ---		Supports both  :   either Inheritance or creating objects
+Abstract Class  	--- 		Only for Inheritance (Act as a base class)
+Sealed Class 		--- 		Only for creating instances, not for Inheritance
+Partial Class 		---	    Class definition is split into multiple files 
+Static  Class  		---		A class that contains only static members. 	Not for instances.
+
+------------------------------------------------------------------------
+
+Abstract Class 
+~~~~~~~~~~~~~
 
 
 
 
 
+Interfaces
+~~~~~~~~~~~
+
+-->  In C#, an interface defines a contract that classes  can implement. 
+-->  It specifies a set of members (methods, properties ...) that the implementing type must provide, but typically does not provide an implementation for them. 
+--> Interfaces are declared using the interface keyword and, by convention, their names start with a capital "I"  Eg:   ITest,   IList, ICollection, IEnumerable etc...
+
+
+
+Default Interface Methods (DIMs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--> C# 8.0 introduced significant enhancements to interfaces, most notably default interface methods (DIMs), which allow interfaces to contain method bodies. 
+
+-->  This feature enables developers to add new methods to an existing interface without breaking the code of the classes that implement it.
+
+
+
+public interface ILogger
+{
+    void Log(string info); // Abstract method (no body)
+
+    // Default implementation
+    void LogInfo(string typeofInformation, string info) => Console.WriteLine(typeofInformation + " " + info);
+}
+
+public class TextLogger : ILogger
+{
+    public void Log(string info) => Console.WriteLine("In base Logger: " + info);
+}
+
+
+ 
