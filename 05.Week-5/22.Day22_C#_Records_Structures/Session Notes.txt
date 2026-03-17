@@ -1,0 +1,159 @@
+
+Day21
+~~~~~~
+
+1. Why do we use collections in C#?
+2. Diff. Array vs ArrayList?
+3. Diff. ArrayList vs List?
+
+
+
+
+Array						Type Safety				Fixed  Six					System
+ArrayList				Not type-safe			Resizeable 				System.Collections
+List 							Type Safety				Resizeable 				System.Collections.Generics	
+-----------------------------------------------------------------
+
+
+
+Arrays in C#
+~~~~~~~~~~
+
+int[]   ar;
+int[]   ar = new int[10];
+int[]   ar =  {1,2,3,4,5};
+int[]   ar =  new int[] {1,2,3,4,5};
+
+
+ int[] arr = { 10, 20, 30, 40, 50 };
+
+ for (int i = 0; i < arr.Length; i++)
+ {
+     Console.WriteLine(arr[i]);
+ }
+
+
+ foreach(int item in arr)
+ {
+     Console.WriteLine(item);
+ }
+
+
+
+
+
+
+
+1.    Read array of numbers from the user 
+2.    Send that array to a method :   GetEvenOddCounts()
+3.    int[]   GetEvenOddTotals(int[]    ar)
+4.    Finally display the result in main method 
+	
+------------------------------------------------------------------------------------------
+
+Special Types in C#
+~~~~~~~~~~~~~~~~~~
+
+1.  Structure 
+2.  Enum  (Collections of constants)
+3.  Record    (C# 9.0)
+
+
+
+Working with Structures
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ --> In C#, a structure (struct) is a value type used to group related data together. 
+ --> It’s similar to a class but is designed for small, lightweight objects.
+
+Simple Definition
+~~~~~~~~~~~~~~~~
+	A struct:
+		Stores data (fields)
+		Can have methods, properties, constructors
+		Is stored by value (copied when assigned)
+		
+Usage:
+~~~~~~~~
+struct Rectangle
+{
+    public int Width;
+    public int Height;
+}
+
+
+-----------------------------------------------------------------------------------------
+
+
+Enums in C#
+
+An enum (enumeration) in C# is a value type used to define a set of named constants. It makes your code more readable, safe, and meaningful instead of using numbers directly.
+
+
+
+using System;
+
+enum Days
+{
+    Sunday,
+    Monday,
+    Tuesday
+}
+
+ 
+        Days today = Days.Monday;
+
+        Console.WriteLine(today);        // Output: Monday
+        Console.WriteLine((int)today);   // Output: 1
+   
+   
+
+Working with Records
+~~~~~~~~~~~~~~~~~~~~
+
+// Using Class
+	Person p1 =  new Person("Scott");
+	Person p2 =  new Person("Scott");
+	
+// reference-based equality
+	Console.WriteLine(p1 == p2);		//  false 
+--------------------------------------------------------------------------
+	
+	
+// Using Record	
+	public record Person(string Name, int Age);
+		
+	var p1 = new Person("Alice", 25);
+    var p2 = new Person("Alice", 25);
+	
+	// value-based equality
+	Console.WriteLine(p1 == p2);		//  true 
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
