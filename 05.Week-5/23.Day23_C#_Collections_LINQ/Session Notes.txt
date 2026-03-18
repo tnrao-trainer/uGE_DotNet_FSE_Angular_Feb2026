@@ -1,0 +1,170 @@
+Day-23  (18th March, 2026)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Working with Collections in C#
+--------------------------------------------
+
+
+
+
+Array						Type Safety				Fixed  Six					System
+ArrayList				Not type-safe			Resizeable 				System.Collections
+List 							Type Safety				Resizeable 				System.Collections.Generics	
+-----------------------------------------------------------------
+
+
+Arrays
+~~~~~~~
+	using System;
+	int[]   numbers =  new int[10];
+
+Collection ( ArrayList )
+~~~~~~~~~~~~~~~~~~~~~
+	using System.Collections;
+	ArrayList arrList = new ArrayList();
+	
+	arrList.Add(10);		//   stores as System.Object;  boxing 
+	arrList.Add(20);
+
+	int n = (int)  arrList[0];		// unboxing
+	-------------------------------------
+	
+Generic Collections (List)
+
+   using System.Collections.Generic;
+   
+	List<int> lst = new  List<int>();
+	
+	lst.Add(10);		 
+	lst.Add(20);
+
+	int n =  lst[0];	 
+
+
+
+
+
+
+
+lst.Insert(2,  "Mumbai");
+
+
+
+
+
+
+
+
+
+
+	Employee
+	
+	List<Employee>    empList =  new List<Employee>();
+
+
+ // Object Initializer
+Employee obj = new Employee() { Id = 1, Name = "Alice", Job = "Manager", Salary = 75000, Deptno = 10 };
+
+
+
+
+
+
+int[]  ar = new int[] { 10,20,30};
+
+
+ // Collection Initializer
+ List<Employee> empList = new List<Employee>()
+ {
+       new Employee() { Id = 1, Name = "Alice", Job = "Manager", Salary = 75000, Deptno = 10 },
+       new Employee() { Id = 2, Name = "Bob", Job = "Developer", Salary = 65000, Deptno = 20 },
+       new Employee() { Id = 3, Name = "Charlie", Job = "Analyst", Salary = 60000, Deptno = 20 }
+ };
+
+
+
+
+
+
+
+
+
+
+Find()
+First()
+FirstOrDefault()
+Where()
+
+ Employee obj = empList.First( item => item.Id == eno );
+ Employee obj = empList.FirstOrDefault( item => item.Id == eno );
+ 
+ -------------------------------------------------------------------
+ 
+ Dictionary Collection
+ ~~~~~~~~~~~~~~~~~~
+ 
+ List<T>
+ Dictionary<T,T>
+ 
+ 
+ Dictionary<string,  long>
+ Dictionary<string,  string>
+ Dictionary<int,  string>
+ Dictionary<int,  Employee>
+ Dictionary<int,  Product>
+ Dictionary<string,  Customer>
+ 
+ 
+ 
+ Dictionary<string, int>    d1 = new Dictionary<string, int>();
+ 
+ 
+ 
+ empsDictionary.Add(id, empObj);
+ empsDictionary.ContainsKey(eno)
+  empsDictionary.Remove(eno);
+ empsDictionary.Keys
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Key  - value 	pairs 
+ 
+ 
+ 
+ 
+ 
+ 
+ Student Grades 
+ ~~~~~~~~~~~~~~~
+	Scott  --   56,89,74,58
+	Smith  --  56,89,74, 58, 96
+	Sandy  --  56,89,74,  58, 96, 48
+	
+	
+ 
+ 
+	Dictionary<  string,  List<int>  >  	
+ 
+	
+ 
+ 
+ 
+ List<OrderItem>    
+		Id
+		Pname
+		Qty 
+		Total
+		
+ 
+ Dictionary<string,  double>  priceList   =  new Dictionary<string, double>();
+ 
+ 
+ 
+ 
+ 
