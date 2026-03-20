@@ -1,0 +1,44 @@
+
+Day24
+~~~~~~~
+
+
+Namespace :   System.IO
+
+
+
+To Access metadata about the file system items:  
+	a. FileInfo
+	b. DirectoryInfo
+	c.  DriveInfo
+
+
+To process the content of the file:
+		a.  File
+		b.  Stream Classes 
+					--  StreamWriter
+					--  StreamReader 
+
+
+
+
+StreamWriter sw = new StreamWriter(fileName);		//  over-write mode
+StreamWriter sw = new StreamWriter(fileName, true);		//  append  mode
+
+
+StreamWriter sw = new StreamWriter(fileName);
+sw.WriteLine();
+sw.Close();
+
+
+[OR]
+
+using(  StreamWriter sw = new StreamWriter(fileName, isAppend) )
+{
+	sw.WriteLine();
+}
+
+ 
+
+
+
