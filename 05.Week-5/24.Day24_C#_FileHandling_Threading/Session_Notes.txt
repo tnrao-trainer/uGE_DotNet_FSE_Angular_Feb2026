@@ -1,1 +1,12 @@
  
+
+Day24
+~~~~~~
+
+
+1.  Tuples and Pattern Matching Enhancements
+2.  File Handling and I/O Operations
+3.  Multi-Threading
+
+
+
