@@ -1,0 +1,43 @@
+
+
+Multithreading in C#
+~~~~~~~~~~~~~~~~~
+
+
+What is Multithreading?
+
+-->  Multithreading means executing multiple threads (lightweight process) within a single program. 
+
+-->  Faster execution  (parallel work)
+-->  Better CPU utilization 
+-->  Responsive applications (no freezing UI)
+-->  Background Processing 
+
+------------------------------------------------------------------------------------------
+
+
+Namespace :   System.Threading
+
+Delegate  :   ThreadStart
+Class:  	Thread  
+Methods:   
+					 Start
+					 Thread.Sleep(milliseconds)
+
+
+Main Thread 			---		1
+Worker Threads	---		n 
+
+
+
+
+Thread Pooling :    Thread Pool is a smart technique to reuse the threads instead of creating the new threads every time.   It helps to improve the program faster and more efficient. 
+
+
+ Task Parallel Library (TPL)
+ ~~~~~~~~~~~~~~~~~~~~~~~
+
+The Task Parallel Library (TPL) is a set of public APIs in the .NET framework, located primarily in the System.Threading.Tasks namespace, designed to simplify the process of adding parallelism and concurrency to applications. 
+
+
+TPL provides a higher-level, task-based programming model over traditional threads, abstracting away complexities like thread management, scheduling, and load balancing. This allows developers to focus on application logic while efficiently utilizing modern multi-core processors to improve performance and responsiveness, especially for CPU-bound operations. 
